@@ -50,7 +50,7 @@
 <p id="gateText">Checking your account…</p>
 <button id="gatePrimary">Unlock</button>
 <button id="gatePassword" class="gate-secondary" style="display:none">Use password</button>
-<div class="gate-build">Build 16</div>
+<div class="gate-build">Build 17</div>
 </div></div><div id="offlineNote" class="offline-note">Offline · using saved data</div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -73,7 +73,7 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 16 · Clean Offline Face ID</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 17 · Online Auth Repair</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
 <div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
@@ -155,7 +155,7 @@ function setGateMode(){
       password.style.display='none';
     }else{
       text.textContent='Unlock NFL Pools to view your pools and picks.';
-      primary.textContent='Unlock with Face ID / Touch ID';
+      primary.textContent=hasOfflineBio()?'Unlock with Face ID / Touch ID':'Unlock with Face ID / Touch ID';
       primary.disabled=false;
       password.style.display='block';
     }
@@ -378,8 +378,9 @@ async function initAuth(){
     currentUser=data.session?.user||null;
     updateAuthUI();
     if(currentUser){
-      if(navigator.onLine)await loadCloud(false);
-      else{cloudReady=false;setSyncStatus('Offline · using saved data',false)}
+      if(navigator.onLine){
+        try{await loadCloud(false)}catch(loadErr){console.warn('Initial cloud refresh failed',loadErr);cloudReady=false;setSyncStatus('Signed in · sync will retry',false)}
+      }else{cloudReady=false;setSyncStatus('Offline · using saved data',false)}
       setGateMode();
     }else{
       cloudReady=false;
@@ -627,15 +628,21 @@ document.getElementById('gatePrimary').onclick=async()=>{
   const b=document.getElementById('gatePrimary'),t=document.getElementById('gateText');
   b.disabled=true;t.textContent='Waiting for Face ID / Touch ID…';
   try{
-    if(!navigator.onLine){
+    if(hasOfflineBio()){
       await unlockOfflineBiometric();
       revealUnlockedApp(true);
-      setSyncStatus('Offline · changes will sync later',false);
+      if(!navigator.onLine)setSyncStatus('Offline · changes will sync later',false);
+      else{
+        setSyncStatus('Signed in · syncing…',false);
+        try{await loadCloud(false)}catch(loadErr){console.warn('Cloud refresh after local unlock failed',loadErr);setSyncStatus('Signed in · sync will retry',false)}
+      }
       return
     }
+    if(!navigator.onLine)throw new Error('Offline Face ID / Touch ID has not been enabled on this device.');
     const {data,error}=await sb.auth.signInWithPasskey();
     if(error)throw error;
-    currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true)
+    currentUser=data.user;updateAuthUI();revealUnlockedApp(true);
+    try{await loadCloud(false)}catch(loadErr){console.warn('Cloud refresh after sign-in failed',loadErr);setSyncStatus('Signed in · sync will retry',false)}
   }catch(e){
     console.error(e);
     t.textContent=!navigator.onLine?'Offline Face ID / Touch ID was cancelled or unavailable.':'Face ID / Touch ID was cancelled or unavailable.';
@@ -658,7 +665,8 @@ document.getElementById('signIn').onclick=async()=>{
   authMessage('Signing in…');
   const {data,error}=await sb.auth.signInWithPassword({email,password});
   if(error){authMessage(error.message,true);return}
-  currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true);authMessage('Signed in and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)
+  currentUser=data.user;updateAuthUI();revealUnlockedApp(true);
+    try{await loadCloud(false)}catch(loadErr){console.warn('Cloud refresh after sign-in failed',loadErr);setSyncStatus('Signed in · sync will retry',false)};authMessage('Signed in and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)
 };
 document.getElementById('signUp').onclick=async()=>{
   let email=document.getElementById('authEmail').value.trim(),password=document.getElementById('authPassword').value;
@@ -666,7 +674,8 @@ document.getElementById('signUp').onclick=async()=>{
   authMessage('Creating account…');
   const {data,error}=await sb.auth.signUp({email,password,options:{emailRedirectTo:'https://mgmunro52.github.io/NFL-PickAll-2026/'}});
   if(error){authMessage(error.message,true);return}
-  if(data.session){currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true);authMessage('Account created and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)}
+  if(data.session){currentUser=data.user;updateAuthUI();revealUnlockedApp(true);
+    try{await loadCloud(false)}catch(loadErr){console.warn('Cloud refresh after sign-in failed',loadErr);setSyncStatus('Signed in · sync will retry',false)};authMessage('Account created and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)}
   else authMessage('Account created. Check your email to confirm it, then return here and sign in.')
 };
 
@@ -696,7 +705,8 @@ document.getElementById('passkeySignIn').onclick=async()=>{
   try{
     const {data,error}=await sb.auth.signInWithPasskey();
     if(error)throw error;
-    currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true);authMessage('Unlocked and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)
+    currentUser=data.user;updateAuthUI();revealUnlockedApp(true);
+    try{await loadCloud(false)}catch(loadErr){console.warn('Cloud refresh after sign-in failed',loadErr);setSyncStatus('Signed in · sync will retry',false)};authMessage('Unlocked and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)
   }catch(e){authMessage(e.message||'Passkey sign-in was cancelled or failed.',true)}
 };
 document.getElementById('syncNow').onclick=()=>syncAllToCloud(true);
