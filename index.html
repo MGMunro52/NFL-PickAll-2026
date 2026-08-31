@@ -38,11 +38,16 @@
 .authgate.hide{display:none}.authgate-card{width:min(520px,100%);background:#fff;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(15,23,42,.18);text-align:center}
 .authgate-card h2{margin:0 0 6px}.authgate-card p{margin:0 0 14px;color:#64748b;font-size:13px;line-height:1.4}.authgate-card button{width:100%;padding:12px;border-radius:11px;border:0;background:#0b172a;color:#fff;font-weight:800}
 .app.authhidden,.poolhome.authhidden{display:none!important}
+
+.authgate-card .gate-secondary{margin-top:8px;background:#fff;color:#0b172a;border:1px solid #cbd5e1}
+.gate-build{font-size:10px;color:#94a3b8;margin-top:12px}
 </style></head><body><div id="authGate" class="authgate"><div class="authgate-card">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
 <h2>NFL Pools 2026</h2>
-<p>Sign in to see your pools and synchronize them across devices.</p>
-<button id="gateSignIn">Sign in</button>
+<p id="gateText">Checking your account…</p>
+<button id="gatePrimary">Unlock</button>
+<button id="gatePassword" class="gate-secondary" style="display:none">Use password</button>
+<div class="gate-build">Build 11</div>
 </div></div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -65,7 +70,7 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 10 · Login Gate</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 11 · App Lock</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
 <div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
@@ -116,6 +121,7 @@ function normPool(p){
 }
 pools.forEach(normPool);
 let currentUser=null,cloudBusy=false,cloudTimer=null,cloudReady=false;
+let appUnlocked=false;
 const CLOUD_SEASON=2026;
 function isUuid(s){return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(String(s||''))}
 function setSyncStatus(msg,ok=false,busy=false){
@@ -123,6 +129,36 @@ function setSyncStatus(msg,ok=false,busy=false){
   let top=document.getElementById('topSync');if(top){top.textContent=busy?'Syncing…':(ok?'✓ Synced':'Local');top.className='topsync'+(ok?' ok':'')+(busy?' busy':'')}
 }
 function authMessage(msg,err=false){let e=document.getElementById('authMsg');if(e){e.textContent=msg||'';e.className='authmsg'+(err?' err':'')}}
+function setGateMode(){
+  const gate=document.getElementById('authGate'),
+        text=document.getElementById('gateText'),
+        primary=document.getElementById('gatePrimary'),
+        password=document.getElementById('gatePassword');
+  gate.classList.remove('hide');
+  if(currentUser){
+    text.textContent='Unlock NFL Pools to view your pools and picks.';
+    primary.textContent='Unlock with Face ID / Touch ID';
+    password.style.display='block';
+  }else{
+    text.textContent='Sign in to access your pools and synchronize them across devices.';
+    primary.textContent='Sign in';
+    password.style.display='none';
+  }
+}
+function revealUnlockedApp(showHome=true){
+  appUnlocked=true;
+  document.getElementById('authGate').classList.add('hide');
+  document.getElementById('poolHome').classList.remove('authhidden');
+  document.getElementById('mainApp').classList.remove('authhidden');
+  if(showHome)showPoolHome();
+}
+function lockApp(){
+  appUnlocked=false;
+  document.getElementById('poolHome').classList.add('authhidden');
+  document.getElementById('mainApp').classList.add('authhidden');
+  setGateMode();
+}
+
 function passkeyFlagKey(){return currentUser?'nfl26_passkey_'+currentUser.id:'nfl26_passkey_none'}
 function hasPasskeyHere(){try{return localStorage.getItem(passkeyFlagKey())==='1'}catch(e){return false}}
 function markPasskeyHere(){try{localStorage.setItem(passkeyFlagKey(),'1')}catch(e){}}
@@ -225,7 +261,7 @@ async function loadCloud(showHome=true){
       if(!pools.some(p=>p.id===activeId))activeId=pools[0].id;
       localStorage.setItem(POOLS_KEY,JSON.stringify(pools));localStorage.setItem(ACTIVE_KEY,activeId)
     }
-    cloudReady=true;setSyncStatus('Synced · '+(currentUser.email||'account'),true);refreshPoolSelect();render();if(showHome)showPoolHome()
+    cloudReady=true;setSyncStatus('Synced · '+(currentUser.email||'account'),true);refreshPoolSelect();render();if(showHome&&appUnlocked)showPoolHome()
   }catch(e){
     console.error(e);cloudReady=true;setSyncStatus('Sync problem · using local copy',false);authMessage(e.message||'Could not load cloud data.',true)
   }finally{cloudBusy=false}
@@ -238,27 +274,38 @@ async function deleteCloudPool(p){
 }
 function updateAuthUI(){
   let out=document.getElementById('signedOutUI'),inn=document.getElementById('signedInUI'),em=document.getElementById('accountEmail');
-  let gate=document.getElementById('authGate'),home=document.getElementById('poolHome'),app=document.getElementById('mainApp');
-  if(currentUser){
-    out.style.display='none';inn.style.display='block';em.textContent=currentUser.email||currentUser.id;
-    gate.classList.add('hide');home.classList.remove('authhidden');app.classList.remove('authhidden')
-  }else{
-    out.style.display='block';inn.style.display='none';
-    gate.classList.remove('hide');home.classList.add('authhidden');app.classList.add('authhidden')
-  }
-  updatePasskeyUI()
+  if(currentUser){out.style.display='none';inn.style.display='block';em.textContent=currentUser.email||currentUser.id}
+  else{out.style.display='block';inn.style.display='none'}
+  updatePasskeyUI();
+  if(!appUnlocked)setGateMode()
 }
 function openAuth(){updateAuthUI();authMessage('');document.getElementById('authBox').classList.add('show')}
 async function initAuth(){
   try{
-    const {data}=await sb.auth.getSession();currentUser=data.session?.user||null;updateAuthUI();
-    if(currentUser)await loadCloud();else{cloudReady=false;setSyncStatus('Local only · not signed in',false)}
+    appUnlocked=false;
+    lockApp();
+    const {data}=await sb.auth.getSession();
+    currentUser=data.session?.user||null;
+    updateAuthUI();
+    if(currentUser){
+      await loadCloud(false);
+      setGateMode();
+    }else{
+      cloudReady=false;
+      setSyncStatus('Signed out',false);
+      setGateMode();
+    }
     sb.auth.onAuthStateChange(async(_event,session)=>{
-      let next=session?.user||null,changed=(next?.id||null)!==(currentUser?.id||null);currentUser=next;updateAuthUI();
-      if(changed&&currentUser)await loadCloud();
-      if(!currentUser){cloudReady=false;setSyncStatus('Local only · not signed in',false)}
+      let next=session?.user||null,changed=(next?.id||null)!==(currentUser?.id||null);
+      currentUser=next;updateAuthUI();
+      if(changed&&currentUser)await loadCloud(false);
+      if(!currentUser){cloudReady=false;lockApp();setSyncStatus('Signed out',false)}
     })
-  }catch(e){console.error(e);setSyncStatus('Local only · Supabase unavailable',false)}
+  }catch(e){
+    console.error(e);
+    setSyncStatus('Supabase unavailable',false);
+    lockApp()
+  }
 }
 function poolTypeText(p){
   if(p.type==='limited')return 'Limited Pick'+(Number(p.maxUses)===1?' (Suicide)':'')+' · '+(Number(p.picksPerWeek)>=99?'Unlimited':p.picksPerWeek)+' pick'+(Number(p.picksPerWeek)===1?'':'s')+'/week · '+(Number(p.maxUses)>=99?'Unlimited team use':p.maxUses+' use'+(Number(p.maxUses)===1?'':'s')+'/team');
@@ -413,7 +460,28 @@ document.getElementById('deletePool').onclick=async()=>{
 };
 dr.onclick=e=>{if(e.target===dr)dr.classList.remove('show')};
 
-document.getElementById('gateSignIn').onclick=openAuth;
+
+document.getElementById('gatePrimary').onclick=async()=>{
+  if(!currentUser){openAuth();return}
+  if(!window.PublicKeyCredential){openAuth();authMessage('Biometric/passkey unlock is not available here. Use your password.',true);return}
+  const b=document.getElementById('gatePrimary'),t=document.getElementById('gateText');
+  b.disabled=true;t.textContent='Waiting for Face ID / Touch ID…';
+  try{
+    const {data,error}=await sb.auth.signInWithPasskey();
+    if(error)throw error;
+    currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true)
+  }catch(e){
+    console.error(e);
+    t.textContent='Face ID / Touch ID was cancelled or unavailable.';
+    document.getElementById('gatePassword').style.display='block'
+  }finally{b.disabled=false}
+};
+document.getElementById('gatePassword').onclick=()=>{
+  openAuth();
+  document.getElementById('signedOutUI').style.display='block';
+  document.getElementById('signedInUI').style.display='none';
+  authMessage('Enter your account email and password to unlock.')
+};
 document.getElementById('homeAccount').onclick=openAuth;
 document.getElementById('accountTop').onclick=openAuth;
 document.getElementById('closeAuth').onclick=()=>document.getElementById('authBox').classList.remove('show');
@@ -424,7 +492,7 @@ document.getElementById('signIn').onclick=async()=>{
   authMessage('Signing in…');
   const {data,error}=await sb.auth.signInWithPassword({email,password});
   if(error){authMessage(error.message,true);return}
-  currentUser=data.user;updateAuthUI();await loadCloud();authMessage('Signed in and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),350)
+  currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true);authMessage('Signed in and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)
 };
 document.getElementById('signUp').onclick=async()=>{
   let email=document.getElementById('authEmail').value.trim(),password=document.getElementById('authPassword').value;
@@ -432,7 +500,7 @@ document.getElementById('signUp').onclick=async()=>{
   authMessage('Creating account…');
   const {data,error}=await sb.auth.signUp({email,password,options:{emailRedirectTo:'https://mgmunro52.github.io/NFL-PickAll-2026/'}});
   if(error){authMessage(error.message,true);return}
-  if(data.session){currentUser=data.user;updateAuthUI();await loadCloud();authMessage('Account created and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),350)}
+  if(data.session){currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true);authMessage('Account created and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)}
   else authMessage('Account created. Check your email to confirm it, then return here and sign in.')
 };
 
@@ -453,12 +521,12 @@ document.getElementById('passkeySignIn').onclick=async()=>{
   try{
     const {data,error}=await sb.auth.signInWithPasskey();
     if(error)throw error;
-    currentUser=data.user;updateAuthUI();await loadCloud(false);authMessage('Signed in with passkey and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),350)
+    currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true);authMessage('Unlocked and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),250)
   }catch(e){authMessage(e.message||'Passkey sign-in was cancelled or failed.',true)}
 };
 document.getElementById('syncNow').onclick=()=>syncAllToCloud(true);
 document.getElementById('signOut').onclick=async()=>{
-  await sb.auth.signOut();currentUser=null;cloudReady=false;updateAuthUI();setSyncStatus('Signed out',false);authMessage('Signed out.');document.getElementById('authBox').classList.remove('show')
+  await sb.auth.signOut();currentUser=null;cloudReady=false;appUnlocked=false;updateAuthUI();setSyncStatus('Signed out',false);authMessage('Signed out.');document.getElementById('authBox').classList.remove('show');lockApp()
 };
 
 let lastCloudPull=0;
