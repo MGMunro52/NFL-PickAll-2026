@@ -1,6 +1,17 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b172a"><title>NFL 2026 PickAll</title><link rel="manifest" href="manifest.json"><style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Calibri,Arial,sans-serif;background:#f3f4f6;color:#111827}button,select{font:inherit}.app{height:100dvh;display:grid;grid-template-rows:minmax(0,2fr) minmax(188px,1fr)}.top{overflow:auto;padding:8px}.toolbar{position:sticky;top:0;z-index:9;background:#f3f4f6;display:flex;gap:5px;align-items:center;padding-bottom:7px}.toolbar select,.toolbar button{border:1px solid #d1d5db;background:#fff;border-radius:9px;padding:8px}.poolselect{max-width:145px;font-weight:700}.poolname{width:55%;padding:8px;border:1px solid #d1d5db;border-radius:8px}.danger{width:100%;padding:10px;border:1px solid #ef4444;border-radius:10px;background:#fff;color:#b91c1c;font-weight:700;margin-top:8px}.muted{font-size:11px;color:#6b7280;margin:-4px 0 8px}.row.disabled{opacity:.45}.pooltag{font-size:10px;color:#6b7280;margin-top:2px}.spacer{flex:1}#week{font-weight:700}.summary{background:#e8f0fe;border:1px solid #bfdbfe;border-radius:9px;padding:7px 9px;margin-bottom:7px;font-size:13px}.summary:empty{display:none}.games{display:grid;gap:6px}.game{background:#fff;border:1px solid #d1d5db;border-radius:11px;padding:7px;display:grid;grid-template-columns:58px minmax(72px,1fr) 18px minmax(72px,1fr) 72px;gap:4px;align-items:center}.meta{font-size:10.5px;color:#6b7280}.tw{display:grid;grid-template-columns:1fr 24px;gap:3px}.team{min-height:43px;border:0;border-radius:8px;color:#fff;font-weight:700;font-size:15px;padding:5px 2px}.team.sel{outline:4px solid #111827;outline-offset:1px}.info{border:1px solid #d1d5db;border-radius:7px;background:#fff;padding:0;font-weight:700}.at{text-align:center;font-weight:700;color:#6b7280}.spread{text-align:center;font-size:10px;color:#6b7280}.spread b{display:block;color:#111827;font-size:12px}.future{grid-column:1/6;display:none;background:#f9fafb;border-radius:8px;padding:7px 8px;font-size:11px;line-height:1.4;width:100%;max-width:100%;min-width:0;overflow:hidden}.future.show{display:block}.season-strip{display:flex;gap:5px;width:100%;max-width:100%;min-width:0;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;padding:7px 1px 7px;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain;scrollbar-width:thin}.sg{flex:0 0 auto;border:1px solid #d1d5db;background:#fff;border-radius:7px;padding:5px 7px;min-width:72px;text-align:center}.sg.current{outline:2px solid #111827;font-weight:700}.sg .w{display:block;font-size:9px;color:#6b7280;margin-bottom:1px}.bottom{background:#fff;border-top:2px solid #0b172a;padding:7px 8px max(7px,env(safe-area-inset-bottom));overflow:auto}.bh{display:flex;align-items:center;gap:6px;margin-bottom:6px}.legend{font-size:10px;color:#6b7280}.right{margin-left:auto;display:flex;gap:4px}.right button{border:1px solid #d1d5db;background:#fff;border-radius:8px;padding:6px 7px;font-size:11px}.grid{display:grid;grid-template-columns:repeat(8,minmax(38px,1fr));gap:3px}.chip{border-radius:8px;padding:4px 1px;color:#fff;text-align:center;font-weight:700;font-size:10px;min-height:37px;display:flex;flex-direction:column;justify-content:center;border:1px solid rgba(0,0,0,.15)}.chip span{font-size:13px}.chip.max{box-shadow:inset 0 0 0 3px #f59e0b}.drawer{position:fixed;inset:0;background:#0005;display:none;align-items:flex-end;z-index:30}.drawer.show{display:flex}.panel{background:#fff;width:100%;border-radius:18px 18px 0 0;padding:15px}.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid #e5e7eb}.row select{padding:7px;border:1px solid #d1d5db;border-radius:8px;background:#fff}.done{width:100%;padding:11px;border:0;border-radius:10px;background:#0b172a;color:#fff;font-weight:700;margin-top:12px}@media(min-width:900px){.games{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(16,1fr)}}
-</style></head><body><div class="app"><section class="top"><div class="toolbar"><select id="poolSelect" class="poolselect"></select><button id="newPool" title="New pool">＋</button><select id="week"></select><button id="prev">◀</button><button id="next">▶</button><div class="spacer"></div><button id="rules">⚙︎ Rules</button></div><div id="summary" class="summary"></div><div id="games" class="games"></div></section><section class="bottom"><div class="bh"><div><b>Season picks</b><div id="legend" class="legend"></div></div><div class="right"><button id="clear">Clear week</button><button id="reset">Reset</button></div></div><div id="grid" class="grid"></div></section></div><div id="drawer" class="drawer"><div class="panel"><h3>Pool rules</h3>
+
+.poolhome{position:fixed;inset:0;z-index:100;background:#f3f4f6;padding:calc(env(safe-area-inset-top) + 18px) 16px calc(env(safe-area-inset-bottom) + 18px);overflow:auto}
+.poolhome.hide{display:none}.poolhome-inner{max-width:620px;margin:0 auto}.poolhome h1{margin:8px 0 4px;font-size:25px}.poolhome .sub{color:#6b7280;font-size:13px;margin-bottom:18px}
+.poolcards{display:grid;gap:10px}.poolcard{background:#fff;border:1px solid #d1d5db;border-radius:14px;padding:14px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.poolcard button{width:100%;text-align:left;border:0;background:transparent;padding:0;color:#111827}.poolcard .nm{font-size:18px;font-weight:700}.poolcard .desc{font-size:12px;color:#6b7280;margin-top:5px}
+.poolcard .arrow{float:right;font-size:20px;color:#6b7280}.poolhome-actions{display:flex;gap:8px;margin-top:14px}.poolhome-actions button{flex:1;border:1px solid #d1d5db;background:#fff;border-radius:11px;padding:11px;font-weight:700}
+.poolhome-actions .primary{background:#0b172a;color:white;border-color:#0b172a}
+</style></head><body><div id="poolHome" class="poolhome"><div class="poolhome-inner">
+<h1>NFL PickAll 2026</h1><div class="sub">Choose a pool to continue</div>
+<div id="poolCards" class="poolcards"></div>
+<div class="poolhome-actions"><button id="homeNewPool" class="primary">＋ New Pool</button></div>
+</div></div><div class="app"><section class="top"><div class="toolbar"><button id="poolsHome">Pools</button><select id="poolSelect" class="poolselect"></select><button id="newPool" title="New pool">＋</button><select id="week"></select><button id="prev">◀</button><button id="next">▶</button><div class="spacer"></div><button id="rules">⚙︎ Rules</button></div><div id="summary" class="summary"></div><div id="games" class="games"></div></section><section class="bottom"><div class="bh"><div><b>Season picks</b><div id="legend" class="legend"></div></div><div class="right"><button id="clear">Clear week</button><button id="reset">Reset</button></div></div><div id="grid" class="grid"></div></section></div><div id="drawer" class="drawer"><div class="panel"><h3>Pool rules</h3>
 <div class="row"><span>Pool name</span><input id="poolName" class="poolname" maxlength="40"></div>
 <div class="row"><span>Pool type</span><select id="poolType">
 <option value="limited">Limited Pick</option>
@@ -42,6 +53,28 @@ const ws=document.getElementById('week'),poolSel=document.getElementById('poolSe
 for(let w=1;w<=18;w++){let o=document.createElement('option');o.value=w;o.textContent='Week '+w;ws.appendChild(o)}
 ws.value=week;
 function save(){localStorage.setItem(POOLS_KEY,JSON.stringify(pools));localStorage.setItem(ACTIVE_KEY,activeId);localStorage.setItem(WEEK_KEY,week)}
+
+function poolTypeText(p){
+  if(p.type==='limited')return 'Limited Pick'+(Number(p.picksPerWeek)===1?' (Suicide)':'')+' · '+(Number(p.picksPerWeek)>=99?'Unlimited':p.picksPerWeek)+' pick'+(Number(p.picksPerWeek)===1?'':'s')+'/week · '+(Number(p.maxUses)>=99?'Unlimited team use':p.maxUses+' use'+(Number(p.maxUses)===1?'':'s')+'/team');
+  if(p.type==='ats_all')return 'Against the Spread — All games';
+  if(p.type==='ats_limited')return 'Against the Spread — '+p.picksPerWeek+' game'+(Number(p.picksPerWeek)===1?'':'s')+'/week';
+  return 'Custom · '+(Number(p.picksPerWeek)>=99?'Unlimited':p.picksPerWeek)+' pick'+(Number(p.picksPerWeek)===1?'':'s')+'/week · '+(Number(p.maxUses)>=99?'Unlimited team use':p.maxUses+' use'+(Number(p.maxUses)===1?'':'s')+'/team');
+}
+function showPoolHome(){
+  let home=document.getElementById('poolHome'),cards=document.getElementById('poolCards');cards.innerHTML='';
+  for(const p of pools){
+    let d=document.createElement('div');d.className='poolcard';
+    d.innerHTML='<button data-p="'+p.id+'"><span class="arrow">›</span><div class="nm">'+p.name+'</div><div class="desc">'+poolTypeText(p)+'</div></button>';
+    d.querySelector('button').onclick=()=>{activeId=p.id;save();render();home.classList.add('hide')};
+    cards.appendChild(d)
+  }
+  home.classList.remove('hide')
+}
+function createPoolFromHome(){
+  let name=prompt('Name the new pool:','New Pool');if(!name)return;
+  let p={id:makeId(),name:name.trim()||'New Pool',type:'limited',maxUses:3,picksPerWeek:1,spreadMode:'auto',picks:{},captured:{}};
+  pools.push(p);activeId=p.id;save();render();document.getElementById('poolHome').classList.add('hide');openRules()
+}
 function refreshPoolSelect(){poolSel.innerHTML='';for(const p of pools){let o=document.createElement('option');o.value=p.id;o.textContent=p.name;poolSel.appendChild(o)}poolSel.value=activeId}
 function c(a){return (TEAMS.find(t=>t.abbr===a)||{}).color||'#374151'}
 function n(a){return (TEAMS.find(t=>t.abbr===a)||{}).name||a}
@@ -134,11 +167,9 @@ document.getElementById('next').onclick=()=>{if(week<18){week++;ws.value=week;sa
 document.getElementById('clear').onclick=()=>{delete P().picks[week];delete P().captured[week];save();render()};
 document.getElementById('reset').onclick=()=>{if(confirm('Clear all picks in '+P().name+'?')){P().picks={};P().captured={};save();render()}};
 poolSel.onchange=()=>{activeId=poolSel.value;save();render()};
-document.getElementById('newPool').onclick=()=>{
-  let name=prompt('Name the new pool:','New Pool');if(!name)return;
-  let p={id:makeId(),name:name.trim()||'New Pool',type:'limited',maxUses:3,picksPerWeek:1,spreadMode:'auto',picks:{},captured:{}};
-  pools.push(p);activeId=p.id;save();render();openRules()
-};
+document.getElementById('newPool').onclick=createPoolFromHome;
+document.getElementById('homeNewPool').onclick=createPoolFromHome;
+document.getElementById('poolsHome').onclick=showPoolHome;
 const dr=document.getElementById('drawer'),mu=document.getElementById('maxUses'),pp=document.getElementById('ppw'),sm=document.getElementById('spreadMode'),pt=document.getElementById('poolType'),pn=document.getElementById('poolName'),maxRow=document.getElementById('maxRow'),ppwRow=document.getElementById('ppwRow'),hint=document.getElementById('ruleHint');
 function ruleUI(){
   let t=pt.value;
@@ -171,5 +202,5 @@ document.getElementById('deletePool').onclick=()=>{
   if(confirm('Delete '+P().name+' and all of its picks?')){pools=pools.filter(p=>p.id!==activeId);activeId=pools[0].id;save();dr.classList.remove('show');render()}
 };
 dr.onclick=e=>{if(e.target===dr)dr.classList.remove('show')};
-refreshPoolSelect();render();loadOdds();
+refreshPoolSelect();render();loadOdds();showPoolHome();
 </script></body></html>
