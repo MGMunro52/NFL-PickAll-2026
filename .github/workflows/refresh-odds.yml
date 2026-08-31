@@ -1,0 +1,100 @@
+name: Refresh NFL odds
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch NFL spreads
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, statistics, urllib.parse, urllib.request
+          from datetime import datetime, timezone
+
+          key = os.environ["ODDS_API_KEY"]
+
+          params = urllib.parse.urlencode({
+              "apiKey": key,
+              "regions": "us",
+              "markets": "spreads",
+              "oddsFormat": "american",
+              "dateFormat": "iso"
+          })
+
+          url = (
+              "https://api.the-odds-api.com/v4/sports/"
+              "americanfootball_nfl/odds?" + params
+          )
+
+          with urllib.request.urlopen(url, timeout=30) as r:
+              events = json.load(r)
+
+          games = {}
+
+          for ev in events:
+              home = ev.get("home_team")
+              away = ev.get("away_team")
+              home_points = []
+              away_points = []
+
+              for bm in ev.get("bookmakers", []):
+                  for market in bm.get("markets", []):
+                      if market.get("key") != "spreads":
+                          continue
+
+                      outcomes = {
+                          o.get("name"): o
+                          for o in market.get("outcomes", [])
+                      }
+
+                      if home in outcomes and away in outcomes:
+                          hp = outcomes[home].get("point")
+                          ap = outcomes[away].get("point")
+
+                          if hp is not None and ap is not None:
+                              home_points.append(float(hp))
+                              away_points.append(float(ap))
+
+              if home_points:
+                  h = statistics.median(home_points)
+                  a = statistics.median(away_points)
+
+                  def clean(x):
+                      return int(x) if float(x).is_integer() else round(x, 2)
+
+                  games[f"{away} @ {home}"] = {
+                      "home": clean(h),
+                      "away": clean(a),
+                      "bookmakers": len(home_points),
+                      "source": f"Consensus ({len(home_points)} books)"
+                  }
+
+          output = {
+              "updated": datetime.now(timezone.utc).isoformat(),
+              "games": games
+          }
+
+          with open("odds.json", "w") as f:
+              json.dump(output, f, indent=2, sort_keys=True)
+
+          print(f"Wrote {len(games)} NFL games")
+          PY
+
+      - name: Save updated odds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add odds.json
+          git diff --cached --quiet || git commit -m "Refresh NFL spreads"
+          git push by
