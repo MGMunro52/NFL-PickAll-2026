@@ -50,7 +50,7 @@
 <p id="gateText">Checking your account…</p>
 <button id="gatePrimary">Unlock</button>
 <button id="gatePassword" class="gate-secondary" style="display:none">Use password</button>
-<div class="gate-build">Build 14</div>
+<div class="gate-build">Build 15</div>
 </div></div><div id="offlineNote" class="offline-note">Offline · using saved data</div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -73,7 +73,7 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 14 · Offline Cache</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 15 · Offline Face ID</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
 <div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
@@ -87,6 +87,8 @@
 <div class="accountrow"><span>Signed in as</span><b id="accountEmail"></b></div>
 <div id="passkeyState" class="passkeystate"></div>
 <button id="registerPasskey" class="wide primary">Enable Face ID / Touch ID</button>
+<div id="offlineBioState" class="passkeystate"></div>
+<button id="registerOfflineBio" class="wide subtle">Enable offline Face ID / Touch ID</button>
 <button id="syncNow" class="wide subtle">Sync now</button>
 <button id="signOut" class="wide">Sign out</button>
 </div>
@@ -140,9 +142,23 @@ function setGateMode(){
         password=document.getElementById('gatePassword');
   gate.classList.remove('hide');
   if(currentUser){
-    text.textContent='Unlock NFL Pools to view your pools and picks.';
-    primary.textContent='Unlock with Face ID / Touch ID';
-    password.style.display='block';
+    if(!navigator.onLine){
+      if(hasOfflineBio()){
+        text.textContent='Offline · unlock this device to view your saved pools and picks.';
+        primary.textContent='Unlock offline with Face ID / Touch ID';
+        primary.disabled=false;
+      }else{
+        text.textContent='Offline unlock has not been enabled on this device. Reconnect once and enable it under Account.';
+        primary.textContent='Offline unlock not set up';
+        primary.disabled=true;
+      }
+      password.style.display='none';
+    }else{
+      text.textContent='Unlock NFL Pools to view your pools and picks.';
+      primary.textContent='Unlock with Face ID / Touch ID';
+      primary.disabled=false;
+      password.style.display='block';
+    }
   }else{
     text.textContent='Sign in to access your pools and synchronize them across devices.';
     primary.textContent='Sign in';
@@ -166,6 +182,70 @@ function lockApp(){
 function passkeyFlagKey(){return currentUser?'nfl26_passkey_'+currentUser.id:'nfl26_passkey_none'}
 function hasPasskeyHere(){try{return localStorage.getItem(passkeyFlagKey())==='1'}catch(e){return false}}
 function markPasskeyHere(){try{localStorage.setItem(passkeyFlagKey(),'1')}catch(e){}}
+
+function offlineBioKey(){return currentUser?'nfl26_offline_bio_'+currentUser.id:'nfl26_offline_bio_none'}
+function offlineDirtyKey(){return currentUser?'nfl26_offline_dirty_'+currentUser.id:'nfl26_offline_dirty_none'}
+function bytesToB64url(bytes){
+  let s='';for(const b of new Uint8Array(bytes))s+=String.fromCharCode(b);
+  return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')
+}
+function b64urlToBytes(s){
+  s=s.replace(/-/g,'+').replace(/_/g,'/');
+  while(s.length%4)s+='=';
+  let raw=atob(s),a=new Uint8Array(raw.length);
+  for(let i=0;i<raw.length;i++)a[i]=raw.charCodeAt(i);
+  return a
+}
+function hasOfflineBio(){try{return !!localStorage.getItem(offlineBioKey())}catch(e){return false}}
+function markOfflineDirty(v=true){try{if(v)localStorage.setItem(offlineDirtyKey(),'1');else localStorage.removeItem(offlineDirtyKey())}catch(e){}}
+function hasOfflineDirty(){try{return localStorage.getItem(offlineDirtyKey())==='1'}catch(e){return false}}
+
+async function registerOfflineBiometric(){
+  if(!currentUser)throw new Error('Sign in first.');
+  if(!window.PublicKeyCredential||!navigator.credentials)throw new Error('Face ID / Touch ID is not available here.');
+  const challenge=crypto.getRandomValues(new Uint8Array(32));
+  const userId=crypto.getRandomValues(new Uint8Array(16));
+  const cred=await navigator.credentials.create({publicKey:{
+    challenge,
+    rp:{name:'NFL Pools 2026',id:location.hostname},
+    user:{id:userId,name:currentUser.email||currentUser.id,displayName:'NFL Pools offline unlock'},
+    pubKeyCredParams:[{type:'public-key',alg:-7},{type:'public-key',alg:-257}],
+    authenticatorSelection:{authenticatorAttachment:'platform',residentKey:'preferred',userVerification:'required'},
+    timeout:60000,
+    attestation:'none'
+  }});
+  if(!cred)throw new Error('Offline Face ID / Touch ID setup was cancelled.');
+  localStorage.setItem(offlineBioKey(),bytesToB64url(cred.rawId));
+  updateOfflineBioUI();
+  return true
+}
+async function unlockOfflineBiometric(){
+  if(!currentUser)throw new Error('No signed-in account is cached on this device.');
+  let id=localStorage.getItem(offlineBioKey());
+  if(!id)throw new Error('Offline Face ID / Touch ID has not been enabled on this device.');
+  const assertion=await navigator.credentials.get({publicKey:{
+    challenge:crypto.getRandomValues(new Uint8Array(32)),
+    allowCredentials:[{type:'public-key',id:b64urlToBytes(id),transports:['internal']}],
+    userVerification:'required',
+    timeout:60000
+  }});
+  if(!assertion)throw new Error('Face ID / Touch ID was cancelled.');
+  return true
+}
+function updateOfflineBioUI(){
+  let b=document.getElementById('registerOfflineBio'),s=document.getElementById('offlineBioState');
+  if(!b||!s)return;
+  if(!currentUser){s.className='passkeystate';s.textContent='';b.style.display='none';return}
+  b.style.display='block';
+  if(hasOfflineBio()){
+    s.textContent='✓ Offline Face ID / Touch ID is enabled on this device.';
+    s.className='passkeystate ok';
+    b.style.display='none'
+  }else{
+    s.textContent='For airplane mode: enable a device-local biometric unlock once while online.';
+    s.className='passkeystate note'
+  }
+}
 function updatePasskeyUI(){
   let b=document.getElementById('registerPasskey'),s=document.getElementById('passkeyState');
   if(!b||!s)return;
@@ -188,7 +268,10 @@ function save(){
   localStorage.setItem(POOLS_KEY,JSON.stringify(pools));
   localStorage.setItem(ACTIVE_KEY,activeId);
   localStorage.setItem(WEEK_KEY,week);
-  if(currentUser&&cloudReady){clearTimeout(cloudTimer);cloudTimer=setTimeout(()=>syncAllToCloud(false),700)}
+  if(currentUser){
+    if(!navigator.onLine)markOfflineDirty(true);
+    else if(cloudReady){clearTimeout(cloudTimer);cloudTimer=setTimeout(()=>syncAllToCloud(false),700)}
+  }
 }
 
 
@@ -231,6 +314,7 @@ async function syncAllToCloud(showMessage=true){
       await syncPoolPicks(p)
     }
     setSyncStatus('Synced · '+(currentUser.email||'account'),true);
+    markOfflineDirty(false);
     if(showMessage)authMessage('Synced successfully.');
     localStorage.setItem(POOLS_KEY,JSON.stringify(pools))
   }catch(e){
@@ -282,6 +366,7 @@ function updateAuthUI(){
   if(currentUser){out.style.display='none';inn.style.display='block';em.textContent=currentUser.email||currentUser.id}
   else{out.style.display='block';inn.style.display='none'}
   updatePasskeyUI();
+  updateOfflineBioUI();
   if(!appUnlocked)setGateMode()
 }
 function openAuth(){updateAuthUI();authMessage('');document.getElementById('authBox').classList.add('show')}
@@ -293,7 +378,8 @@ async function initAuth(){
     currentUser=data.session?.user||null;
     updateAuthUI();
     if(currentUser){
-      await loadCloud(false);
+      if(navigator.onLine)await loadCloud(false);
+      else{cloudReady=false;setSyncStatus('Offline · using saved data',false)}
       setGateMode();
     }else{
       cloudReady=false;
@@ -541,13 +627,19 @@ document.getElementById('gatePrimary').onclick=async()=>{
   const b=document.getElementById('gatePrimary'),t=document.getElementById('gateText');
   b.disabled=true;t.textContent='Waiting for Face ID / Touch ID…';
   try{
+    if(!navigator.onLine){
+      await unlockOfflineBiometric();
+      revealUnlockedApp(true);
+      setSyncStatus('Offline · changes will sync later',false);
+      return
+    }
     const {data,error}=await sb.auth.signInWithPasskey();
     if(error)throw error;
     currentUser=data.user;updateAuthUI();await loadCloud(false);revealUnlockedApp(true)
   }catch(e){
     console.error(e);
-    t.textContent='Face ID / Touch ID was cancelled or unavailable.';
-    document.getElementById('gatePassword').style.display='block'
+    t.textContent=!navigator.onLine?'Offline Face ID / Touch ID was cancelled or unavailable.':'Face ID / Touch ID was cancelled or unavailable.';
+    document.getElementById('gatePassword').style.display=navigator.onLine?'block':'none'
   }finally{b.disabled=false}
 };
 document.getElementById('gatePassword').onclick=()=>{
@@ -589,6 +681,15 @@ document.getElementById('registerPasskey').onclick=async()=>{
     markPasskeyHere();updatePasskeyUI();authMessage('Face ID / Touch ID is enabled on this device.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),500)
   }catch(e){authMessage(e.message||'Passkey registration was cancelled or failed.',true)}
 };
+document.getElementById('registerOfflineBio').onclick=async()=>{
+  if(!currentUser){authMessage('Sign in first, then enable offline Face ID / Touch ID.',true);return}
+  if(!navigator.onLine){authMessage('Reconnect to the Internet once to set up offline Face ID / Touch ID.',true);return}
+  authMessage('Your device will ask you to create a local biometric unlock…');
+  try{
+    await registerOfflineBiometric();
+    authMessage('Offline Face ID / Touch ID is enabled on this device.');
+  }catch(e){authMessage(e.message||'Offline biometric setup was cancelled or failed.',true)}
+};
 document.getElementById('passkeySignIn').onclick=async()=>{
   if(!window.PublicKeyCredential){authMessage('Passkeys are not supported by this browser/device.',true);return}
   authMessage('Waiting for Face ID / Touch ID…');
@@ -611,13 +712,23 @@ async function refreshFromCloudIfNeeded(force=false){
   lastCloudPull=now;
   await loadCloud(false)
 }
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshFromCloudIfNeeded(true)});
-window.addEventListener('focus',()=>refreshFromCloudIfNeeded(false));
-window.addEventListener('online',()=>{updateOfflineUI();refreshFromCloudIfNeeded(true)});
-window.addEventListener('offline',updateOfflineUI);
+async function reconcileAfterReconnect(){
+  updateOfflineUI();
+  setGateMode();
+  if(!currentUser)return;
+  if(hasOfflineDirty()){
+    await syncAllToCloud(false);
+  }
+  await refreshFromCloudIfNeeded(true)
+}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&navigator.onLine)refreshFromCloudIfNeeded(true)});
+window.addEventListener('focus',()=>{if(navigator.onLine)refreshFromCloudIfNeeded(false)});
+window.addEventListener('online',reconcileAfterReconnect);
+window.addEventListener('offline',()=>{updateOfflineUI();setGateMode()});
 function updateOfflineUI(){
   let e=document.getElementById('offlineNote');
-  if(e)e.classList.toggle('show',!navigator.onLine)
+  if(e)e.classList.toggle('show',!navigator.onLine);
+  if(!appUnlocked&&currentUser)setGateMode()
 }
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
