@@ -50,7 +50,7 @@
 <p id="gateText">Checking your account…</p>
 <button id="gatePrimary">Unlock</button>
 <button id="gatePassword" class="gate-secondary" style="display:none">Use password</button>
-<div class="gate-build">Build 17</div>
+<div class="gate-build">Build 18</div>
 </div></div><div id="offlineNote" class="offline-note">Offline · using saved data</div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -73,7 +73,7 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 17 · Online Auth Repair</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 18 · Offline PIN</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
 <div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
@@ -88,7 +88,7 @@
 <div id="passkeyState" class="passkeystate"></div>
 <button id="registerPasskey" class="wide primary">Enable Face ID / Touch ID</button>
 <div id="offlineBioState" class="passkeystate"></div>
-<button id="registerOfflineBio" class="wide subtle">Enable offline Face ID / Touch ID</button>
+<button id="registerOfflineBio" class="wide subtle">Set 6-digit offline PIN</button>
 <button id="syncNow" class="wide subtle">Sync now</button>
 <button id="signOut" class="wide">Sign out</button>
 </div>
@@ -144,12 +144,12 @@ function setGateMode(){
   if(currentUser){
     if(!navigator.onLine){
       if(hasOfflineBio()){
-        text.textContent='Offline · unlock this device to view your saved pools and picks.';
-        primary.textContent='Unlock offline with Face ID / Touch ID';
+        text.textContent='Offline · enter your device PIN to view your saved pools and picks.';
+        primary.textContent='Unlock offline with PIN';
         primary.disabled=false;
       }else{
-        text.textContent='Offline unlock has not been enabled on this device. Reconnect once and enable it under Account.';
-        primary.textContent='Offline unlock not set up';
+        text.textContent='Offline PIN has not been set on this device. Reconnect once and set it under Account.';
+        primary.textContent='Offline PIN not set up';
         primary.disabled=true;
       }
       password.style.display='none';
@@ -183,53 +183,34 @@ function passkeyFlagKey(){return currentUser?'nfl26_passkey_'+currentUser.id:'nf
 function hasPasskeyHere(){try{return localStorage.getItem(passkeyFlagKey())==='1'}catch(e){return false}}
 function markPasskeyHere(){try{localStorage.setItem(passkeyFlagKey(),'1')}catch(e){}}
 
-function offlineBioKey(){return currentUser?'nfl26_offline_bio_v2_'+currentUser.id:'nfl26_offline_bio_v2_none'}
+function offlinePinKey(){return currentUser?'nfl26_offline_pin_'+currentUser.id:'nfl26_offline_pin_none'}
 function offlineDirtyKey(){return currentUser?'nfl26_offline_dirty_'+currentUser.id:'nfl26_offline_dirty_none'}
-function bytesToB64url(bytes){
-  let s='';for(const b of new Uint8Array(bytes))s+=String.fromCharCode(b);
-  return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')
+async function pinDigest(pin){
+  const data=new TextEncoder().encode(location.hostname+'|'+pin);
+  const hash=await crypto.subtle.digest('SHA-256',data);
+  return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('')
 }
-function b64urlToBytes(s){
-  s=s.replace(/-/g,'+').replace(/_/g,'/');
-  while(s.length%4)s+='=';
-  let raw=atob(s),a=new Uint8Array(raw.length);
-  for(let i=0;i<raw.length;i++)a[i]=raw.charCodeAt(i);
-  return a
-}
-function hasOfflineBio(){try{return !!localStorage.getItem(offlineBioKey())}catch(e){return false}}
+function hasOfflineBio(){try{return !!localStorage.getItem(offlinePinKey())}catch(e){return false}}
 function markOfflineDirty(v=true){try{if(v)localStorage.setItem(offlineDirtyKey(),'1');else localStorage.removeItem(offlineDirtyKey())}catch(e){}}
 function hasOfflineDirty(){try{return localStorage.getItem(offlineDirtyKey())==='1'}catch(e){return false}}
-
 async function registerOfflineBiometric(){
   if(!currentUser)throw new Error('Sign in first.');
-  if(!window.PublicKeyCredential||!navigator.credentials)throw new Error('Face ID / Touch ID is not available here.');
-  const challenge=crypto.getRandomValues(new Uint8Array(32));
-  const userId=crypto.getRandomValues(new Uint8Array(16));
-  const cred=await navigator.credentials.create({publicKey:{
-    challenge,
-    rp:{name:'NFL Pools 2026',id:location.hostname},
-    user:{id:userId,name:currentUser.email||currentUser.id,displayName:'NFL Pools offline unlock'},
-    pubKeyCredParams:[{type:'public-key',alg:-7},{type:'public-key',alg:-257}],
-    authenticatorSelection:{authenticatorAttachment:'platform',residentKey:'discouraged',requireResidentKey:false,userVerification:'required'},
-    timeout:60000,
-    attestation:'none'
-  }});
-  if(!cred)throw new Error('Offline Face ID / Touch ID setup was cancelled.');
-  localStorage.setItem(offlineBioKey(),bytesToB64url(cred.rawId));
+  let p1=prompt('Create a 6-digit offline PIN for this device:');
+  if(p1===null)throw new Error('Offline PIN setup was cancelled.');
+  if(!/^\d{6}$/.test(p1))throw new Error('The offline PIN must be exactly 6 digits.');
+  let p2=prompt('Enter the same 6-digit PIN again:');
+  if(p2!==p1)throw new Error('The two PIN entries did not match.');
+  localStorage.setItem(offlinePinKey(),await pinDigest(p1));
   updateOfflineBioUI();
   return true
 }
 async function unlockOfflineBiometric(){
   if(!currentUser)throw new Error('No signed-in account is cached on this device.');
-  let id=localStorage.getItem(offlineBioKey());
-  if(!id)throw new Error('Offline Face ID / Touch ID has not been enabled on this device.');
-  const assertion=await navigator.credentials.get({publicKey:{
-    challenge:crypto.getRandomValues(new Uint8Array(32)),
-    allowCredentials:[{type:'public-key',id:b64urlToBytes(id),transports:['internal']}],
-    userVerification:'required',
-    timeout:60000
-  }});
-  if(!assertion)throw new Error('Face ID / Touch ID was cancelled.');
+  let stored=localStorage.getItem(offlinePinKey());
+  if(!stored)throw new Error('Offline PIN has not been set on this device.');
+  let pin=prompt('Enter your 6-digit offline PIN:');
+  if(pin===null)throw new Error('Offline unlock was cancelled.');
+  if(await pinDigest(pin)!==stored)throw new Error('Incorrect offline PIN.');
   return true
 }
 function updateOfflineBioUI(){
@@ -238,12 +219,13 @@ function updateOfflineBioUI(){
   if(!currentUser){s.className='passkeystate';s.textContent='';b.style.display='none';return}
   b.style.display='block';
   if(hasOfflineBio()){
-    s.textContent='✓ Offline Face ID / Touch ID is enabled on this device.';
+    s.textContent='✓ Offline PIN is enabled on this device.';
     s.className='passkeystate ok';
-    b.style.display='none'
+    b.textContent='Change 6-digit offline PIN'
   }else{
-    s.textContent='For airplane mode: enable the clean device-local Face ID / Touch ID unlock once while online.';
-    s.className='passkeystate note'
+    s.textContent='For airplane mode: set a 6-digit PIN stored only on this device.';
+    s.className='passkeystate note';
+    b.textContent='Set 6-digit offline PIN'
   }
 }
 function updatePasskeyUI(){
@@ -628,24 +610,19 @@ document.getElementById('gatePrimary').onclick=async()=>{
   const b=document.getElementById('gatePrimary'),t=document.getElementById('gateText');
   b.disabled=true;t.textContent='Waiting for Face ID / Touch ID…';
   try{
-    if(hasOfflineBio()){
+    if(!navigator.onLine){
       await unlockOfflineBiometric();
       revealUnlockedApp(true);
-      if(!navigator.onLine)setSyncStatus('Offline · changes will sync later',false);
-      else{
-        setSyncStatus('Signed in · syncing…',false);
-        try{await loadCloud(false)}catch(loadErr){console.warn('Cloud refresh after local unlock failed',loadErr);setSyncStatus('Signed in · sync will retry',false)}
-      }
+      setSyncStatus('Offline · changes will sync later',false);
       return
     }
-    if(!navigator.onLine)throw new Error('Offline Face ID / Touch ID has not been enabled on this device.');
     const {data,error}=await sb.auth.signInWithPasskey();
     if(error)throw error;
     currentUser=data.user;updateAuthUI();revealUnlockedApp(true);
     try{await loadCloud(false)}catch(loadErr){console.warn('Cloud refresh after sign-in failed',loadErr);setSyncStatus('Signed in · sync will retry',false)}
   }catch(e){
     console.error(e);
-    t.textContent=!navigator.onLine?'Offline Face ID / Touch ID was cancelled or unavailable.':'Face ID / Touch ID was cancelled or unavailable.';
+    t.textContent=!navigator.onLine?(e.message||'Offline PIN unlock failed.'):'Face ID / Touch ID was cancelled or unavailable.';
     document.getElementById('gatePassword').style.display=navigator.onLine?'block':'none'
   }finally{b.disabled=false}
 };
@@ -692,12 +669,12 @@ document.getElementById('registerPasskey').onclick=async()=>{
 };
 document.getElementById('registerOfflineBio').onclick=async()=>{
   if(!currentUser){authMessage('Sign in first, then enable offline Face ID / Touch ID.',true);return}
-  if(!navigator.onLine){authMessage('Reconnect to the Internet once to set up offline Face ID / Touch ID.',true);return}
-  authMessage('Your device will ask you to create a local biometric unlock…');
+  if(!navigator.onLine){authMessage('Reconnect to the Internet once to set or change the offline PIN.',true);return}
+  authMessage('Create a 6-digit PIN for offline use on this device.');
   try{
     await registerOfflineBiometric();
-    authMessage('Offline Face ID / Touch ID is enabled on this device.');
-  }catch(e){authMessage(e.message||'Offline biometric setup was cancelled or failed.',true)}
+    authMessage('Offline PIN is enabled on this device.');
+  }catch(e){authMessage(e.message||'Offline PIN setup was cancelled or failed.',true)}
 };
 document.getElementById('passkeySignIn').onclick=async()=>{
   if(!window.PublicKeyCredential){authMessage('Passkeys are not supported by this browser/device.',true);return}
