@@ -1279,9 +1279,9 @@
       "source": "Consensus (1 books)"
     },
     "New York Jets @ Tennessee Titans": {
-      "away": 2.5,
+      "away": 1.5,
       "bookmakers": 9,
-      "home": -2.5,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     },
     "Philadelphia Eagles @ Arizona Cardinals": {
@@ -1417,9 +1417,9 @@
       "source": "Consensus (2 books)"
     },
     "San Francisco 49ers @ Los Angeles Rams": {
-      "away": 3.5,
+      "away": 3.75,
       "bookmakers": 8,
-      "home": -3.5,
+      "home": -3.75,
       "source": "Consensus (8 books)"
     },
     "San Francisco 49ers @ New York Giants": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-08-31T15:43:47.634741+00:00"
+  "updated": "2026-08-31T18:20:54.116052+00:00"
 }
