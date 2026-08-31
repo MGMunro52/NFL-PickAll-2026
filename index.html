@@ -28,6 +28,11 @@
 .topsync{font-size:10px;color:#64748b;white-space:nowrap;max-width:115px;overflow:hidden;text-overflow:ellipsis}
 .topsync.ok{color:#166534}.topsync.busy{color:#92400e}
 @media(max-width:520px){.topsync{display:none}}
+
+.passkeystate{font-size:12px;color:#475569;background:#f8fafc;border-radius:10px;padding:10px 12px;margin:8px 0;display:none}
+.passkeystate.ok{display:block;color:#166534;background:#f0fdf4}
+.passkeystate.note{display:block}
+.authpanel .subtle{background:#f8fafc;color:#475569;border-color:#e2e8f0;font-weight:600}
 </style></head><body><div id="poolHome" class="poolhome"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -35,7 +40,7 @@
 <div class="sub">Choose a pool to continue</div>
 </div>
 <div id="poolCards" class="poolcards"></div>
-<div class="poolhome-actions"><button id="homeNewPool" class="primary">＋ New Pool</button><button id="homeAccount">Account & Sync</button></div>
+<div class="poolhome-actions"><button id="homeNewPool" class="primary">＋ New Pool</button><button id="homeAccount">Account</button></div>
 <div class="poolfoot"><span id="syncStatus" class="localonly">Local only · not signed in</span><br>Independent pool tracker — not affiliated with the NFL.</div>
 </div></div><div class="app"><section class="top"><div class="toolbar"><button id="poolsHome">Pools</button><select id="poolSelect" class="poolselect"></select><button id="newPool" title="New pool">＋</button><select id="week"></select><button id="prev">◀</button><button id="next">▶</button><div class="spacer"></div><span id="topSync" class="topsync">Local</span><button id="accountTop">Account</button><button id="rules">⚙︎ Rules</button></div><div id="summary" class="summary"></div><div id="games" class="games"></div></section><section class="bottom"><div class="bh"><div><b>Season picks</b><div id="legend" class="legend"></div></div><div class="right"><button id="clear">Clear week</button><button id="reset">Reset</button></div></div><div id="grid" class="grid"></div></section></div><div id="drawer" class="drawer"><div class="panel"><h3>Pool rules</h3>
 <div class="row"><span>Pool name</span><input id="poolName" class="poolname" maxlength="40"></div>
@@ -50,20 +55,21 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 8 · Auto Sync + Passkeys</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 9 · Clean Account</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
-<h3>Account & Sync</h3>
-<div class="authsub">Sign in to keep the same pools and picks on your iPhone, iPad, and computer.</div>
+<h3>Account</h3>
+<div class="authsub">Your pools and picks sync automatically across your signed-in devices.</div>
 <div id="signedOutUI">
 <input id="authEmail" type="email" autocomplete="email" placeholder="Email address">
 <input id="authPassword" type="password" autocomplete="current-password" placeholder="Password">
 <div class="authactions"><button id="signUp">Create account</button><button id="signIn" class="primary">Sign in</button></div>
-<button id="passkeySignIn" class="wide">Sign in with Face ID / Touch ID</button>
+<button id="passkeySignIn" class="wide">Use Face ID / Touch ID to sign in</button>
 </div>
 <div id="signedInUI" style="display:none">
 <div class="accountrow"><span>Signed in as</span><b id="accountEmail"></b></div>
+<div id="passkeyState" class="passkeystate"></div>
 <button id="registerPasskey" class="wide primary">Enable Face ID / Touch ID</button>
-<button id="syncNow" class="wide">Sync now</button>
+<button id="syncNow" class="wide subtle">Sync now</button>
 <button id="signOut" class="wide">Sign out</button>
 </div>
 <div id="authMsg" class="authmsg"></div>
@@ -107,6 +113,23 @@ function setSyncStatus(msg,ok=false,busy=false){
   let top=document.getElementById('topSync');if(top){top.textContent=busy?'Syncing…':(ok?'✓ Synced':'Local');top.className='topsync'+(ok?' ok':'')+(busy?' busy':'')}
 }
 function authMessage(msg,err=false){let e=document.getElementById('authMsg');if(e){e.textContent=msg||'';e.className='authmsg'+(err?' err':'')}}
+function passkeyFlagKey(){return currentUser?'nfl26_passkey_'+currentUser.id:'nfl26_passkey_none'}
+function hasPasskeyHere(){try{return localStorage.getItem(passkeyFlagKey())==='1'}catch(e){return false}}
+function markPasskeyHere(){try{localStorage.setItem(passkeyFlagKey(),'1')}catch(e){}}
+function updatePasskeyUI(){
+  let b=document.getElementById('registerPasskey'),s=document.getElementById('passkeyState');
+  if(!b||!s)return;
+  if(!currentUser){s.className='passkeystate';s.textContent='';b.style.display='none';return}
+  b.style.display='block';
+  if(hasPasskeyHere()){
+    s.textContent='✓ Face ID / Touch ID is enabled on this device.';
+    s.className='passkeystate ok';
+    b.style.display='none'
+  }else{
+    s.textContent='Optional: enable Face ID / Touch ID for faster sign-in on this device.';
+    s.className='passkeystate note'
+  }
+}
 
 const ws=document.getElementById('week'),poolSel=document.getElementById('poolSelect');
 for(let w=1;w<=18;w++){let o=document.createElement('option');o.value=w;o.textContent='Week '+w;ws.appendChild(o)}
@@ -207,6 +230,7 @@ function updateAuthUI(){
   let out=document.getElementById('signedOutUI'),inn=document.getElementById('signedInUI'),em=document.getElementById('accountEmail');
   if(currentUser){out.style.display='none';inn.style.display='block';em.textContent=currentUser.email||currentUser.id}
   else{out.style.display='block';inn.style.display='none'}
+  updatePasskeyUI()
 }
 function openAuth(){updateAuthUI();authMessage('');document.getElementById('authBox').classList.add('show')}
 async function initAuth(){
@@ -403,7 +427,7 @@ document.getElementById('registerPasskey').onclick=async()=>{
     const {data,error}=await sb.auth.registerPasskey();
     if(error)throw error;
     let label=(data&&data.friendly_name)?' ('+data.friendly_name+')':'';
-    authMessage('Passkey enabled'+label+'. You can now use Face ID / Touch ID to sign in.')
+    markPasskeyHere();updatePasskeyUI();authMessage('Face ID / Touch ID is enabled on this device.')
   }catch(e){authMessage(e.message||'Passkey registration was cancelled or failed.',true)}
 };
 document.getElementById('passkeySignIn').onclick=async()=>{
