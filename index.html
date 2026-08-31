@@ -33,7 +33,17 @@
 .passkeystate.ok{display:block;color:#166534;background:#f0fdf4}
 .passkeystate.note{display:block}
 .authpanel .subtle{background:#f8fafc;color:#475569;border-color:#e2e8f0;font-weight:600}
-</style></head><body><div id="poolHome" class="poolhome"><div class="poolhome-inner">
+
+.authgate{position:fixed;inset:0;z-index:120;background:linear-gradient(180deg,#071a36 0,#0d3565 31%,#eef3f8 31%,#f5f7fa 100%);display:flex;align-items:center;justify-content:center;padding:24px}
+.authgate.hide{display:none}.authgate-card{width:min(520px,100%);background:#fff;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(15,23,42,.18);text-align:center}
+.authgate-card h2{margin:0 0 6px}.authgate-card p{margin:0 0 14px;color:#64748b;font-size:13px;line-height:1.4}.authgate-card button{width:100%;padding:12px;border-radius:11px;border:0;background:#0b172a;color:#fff;font-weight:800}
+.app.authhidden,.poolhome.authhidden{display:none!important}
+</style></head><body><div id="authGate" class="authgate"><div class="authgate-card">
+<div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
+<h2>NFL Pools 2026</h2>
+<p>Sign in to see your pools and synchronize them across devices.</p>
+<button id="gateSignIn">Sign in</button>
+</div></div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
 <h1>NFL Pools <span>2026</span></h1>
@@ -41,8 +51,8 @@
 </div>
 <div id="poolCards" class="poolcards"></div>
 <div class="poolhome-actions"><button id="homeNewPool" class="primary">＋ New Pool</button><button id="homeAccount">Account</button></div>
-<div class="poolfoot"><span id="syncStatus" class="localonly">Local only · not signed in</span><br>Independent pool tracker — not affiliated with the NFL.</div>
-</div></div><div class="app"><section class="top"><div class="toolbar"><button id="poolsHome">Pools</button><select id="poolSelect" class="poolselect"></select><button id="newPool" title="New pool">＋</button><select id="week"></select><button id="prev">◀</button><button id="next">▶</button><div class="spacer"></div><span id="topSync" class="topsync">Local</span><button id="accountTop">Account</button><button id="rules">⚙︎ Rules</button></div><div id="summary" class="summary"></div><div id="games" class="games"></div></section><section class="bottom"><div class="bh"><div><b>Season picks</b><div id="legend" class="legend"></div></div><div class="right"><button id="clear">Clear week</button><button id="reset">Reset</button></div></div><div id="grid" class="grid"></div></section></div><div id="drawer" class="drawer"><div class="panel"><h3>Pool rules</h3>
+<div class="poolfoot"><span id="syncStatus" class="localonly">Checking account…</span><br>Independent pool tracker — not affiliated with the NFL.</div>
+</div></div><div id="mainApp" class="app authhidden"><section class="top"><div class="toolbar"><button id="poolsHome">Pools</button><select id="poolSelect" class="poolselect"></select><button id="newPool" title="New pool">＋</button><select id="week"></select><button id="prev">◀</button><button id="next">▶</button><div class="spacer"></div><span id="topSync" class="topsync">Local</span><button id="accountTop">Account</button><button id="rules">⚙︎ Rules</button></div><div id="summary" class="summary"></div><div id="games" class="games"></div></section><section class="bottom"><div class="bh"><div><b>Season picks</b><div id="legend" class="legend"></div></div><div class="right"><button id="clear">Clear week</button><button id="reset">Reset</button></div></div><div id="grid" class="grid"></div></section></div><div id="drawer" class="drawer"><div class="panel"><h3>Pool rules</h3>
 <div class="row"><span>Pool name</span><input id="poolName" class="poolname" maxlength="40"></div>
 <div class="row"><span>Pool type</span><select id="poolType">
 <option value="limited">Limited Pick</option>
@@ -55,10 +65,10 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 9 · Clean Account</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 10 · Login Gate</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
-<div class="authsub">Your pools and picks sync automatically across your signed-in devices.</div>
+<div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
 <div id="signedOutUI">
 <input id="authEmail" type="email" autocomplete="email" placeholder="Email address">
 <input id="authPassword" type="password" autocomplete="current-password" placeholder="Password">
@@ -228,8 +238,14 @@ async function deleteCloudPool(p){
 }
 function updateAuthUI(){
   let out=document.getElementById('signedOutUI'),inn=document.getElementById('signedInUI'),em=document.getElementById('accountEmail');
-  if(currentUser){out.style.display='none';inn.style.display='block';em.textContent=currentUser.email||currentUser.id}
-  else{out.style.display='block';inn.style.display='none'}
+  let gate=document.getElementById('authGate'),home=document.getElementById('poolHome'),app=document.getElementById('mainApp');
+  if(currentUser){
+    out.style.display='none';inn.style.display='block';em.textContent=currentUser.email||currentUser.id;
+    gate.classList.add('hide');home.classList.remove('authhidden');app.classList.remove('authhidden')
+  }else{
+    out.style.display='block';inn.style.display='none';
+    gate.classList.remove('hide');home.classList.add('authhidden');app.classList.add('authhidden')
+  }
   updatePasskeyUI()
 }
 function openAuth(){updateAuthUI();authMessage('');document.getElementById('authBox').classList.add('show')}
@@ -397,6 +413,7 @@ document.getElementById('deletePool').onclick=async()=>{
 };
 dr.onclick=e=>{if(e.target===dr)dr.classList.remove('show')};
 
+document.getElementById('gateSignIn').onclick=openAuth;
 document.getElementById('homeAccount').onclick=openAuth;
 document.getElementById('accountTop').onclick=openAuth;
 document.getElementById('closeAuth').onclick=()=>document.getElementById('authBox').classList.remove('show');
@@ -407,7 +424,7 @@ document.getElementById('signIn').onclick=async()=>{
   authMessage('Signing in…');
   const {data,error}=await sb.auth.signInWithPassword({email,password});
   if(error){authMessage(error.message,true);return}
-  currentUser=data.user;updateAuthUI();await loadCloud();authMessage('Signed in and synchronized.')
+  currentUser=data.user;updateAuthUI();await loadCloud();authMessage('Signed in and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),350)
 };
 document.getElementById('signUp').onclick=async()=>{
   let email=document.getElementById('authEmail').value.trim(),password=document.getElementById('authPassword').value;
@@ -415,7 +432,7 @@ document.getElementById('signUp').onclick=async()=>{
   authMessage('Creating account…');
   const {data,error}=await sb.auth.signUp({email,password,options:{emailRedirectTo:'https://mgmunro52.github.io/NFL-PickAll-2026/'}});
   if(error){authMessage(error.message,true);return}
-  if(data.session){currentUser=data.user;updateAuthUI();await loadCloud();authMessage('Account created and synchronized.')}
+  if(data.session){currentUser=data.user;updateAuthUI();await loadCloud();authMessage('Account created and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),350)}
   else authMessage('Account created. Check your email to confirm it, then return here and sign in.')
 };
 
@@ -427,7 +444,7 @@ document.getElementById('registerPasskey').onclick=async()=>{
     const {data,error}=await sb.auth.registerPasskey();
     if(error)throw error;
     let label=(data&&data.friendly_name)?' ('+data.friendly_name+')':'';
-    markPasskeyHere();updatePasskeyUI();authMessage('Face ID / Touch ID is enabled on this device.')
+    markPasskeyHere();updatePasskeyUI();authMessage('Face ID / Touch ID is enabled on this device.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),500)
   }catch(e){authMessage(e.message||'Passkey registration was cancelled or failed.',true)}
 };
 document.getElementById('passkeySignIn').onclick=async()=>{
@@ -436,12 +453,12 @@ document.getElementById('passkeySignIn').onclick=async()=>{
   try{
     const {data,error}=await sb.auth.signInWithPasskey();
     if(error)throw error;
-    currentUser=data.user;updateAuthUI();await loadCloud(false);authMessage('Signed in with passkey and synchronized.')
+    currentUser=data.user;updateAuthUI();await loadCloud(false);authMessage('Signed in with passkey and synchronized.');setTimeout(()=>document.getElementById('authBox').classList.remove('show'),350)
   }catch(e){authMessage(e.message||'Passkey sign-in was cancelled or failed.',true)}
 };
 document.getElementById('syncNow').onclick=()=>syncAllToCloud(true);
 document.getElementById('signOut').onclick=async()=>{
-  await sb.auth.signOut();currentUser=null;cloudReady=false;updateAuthUI();setSyncStatus('Local only · not signed in',false);authMessage('Signed out. The local copy remains on this device.')
+  await sb.auth.signOut();currentUser=null;cloudReady=false;updateAuthUI();setSyncStatus('Signed out',false);authMessage('Signed out.');document.getElementById('authBox').classList.remove('show')
 };
 
 let lastCloudPull=0;
@@ -456,5 +473,5 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 window.addEventListener('focus',()=>refreshFromCloudIfNeeded(false));
 window.addEventListener('online',()=>refreshFromCloudIfNeeded(true));
 setInterval(()=>{if(document.visibilityState==='visible')refreshFromCloudIfNeeded(false)},60000);
-refreshPoolSelect();render();loadOdds();showPoolHome();initAuth();
+refreshPoolSelect();render();loadOdds();initAuth();
 </script></body></html>
