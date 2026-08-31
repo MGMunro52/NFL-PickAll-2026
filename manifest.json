@@ -1,8 +1,8 @@
 {
-  "name": "NFL 2026 PickAll",
-  "short_name": "NFL PickAll",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#f3f4f6",
-  "theme_color": "#0b172a"
+  "background_color": "#071a36",
+  "theme_color": "#0d3565",
+  "name": "NFL Pools 2026",
+  "short_name": "NFL Pools"
 }
