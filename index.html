@@ -47,7 +47,7 @@
 <p id="gateText">Checking your account…</p>
 <button id="gatePrimary">Unlock</button>
 <button id="gatePassword" class="gate-secondary" style="display:none">Use password</button>
-<div class="gate-build">Build 12</div>
+<div class="gate-build">Build 13</div>
 </div></div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -70,7 +70,7 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 12 · Multi-Pool + Injuries</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 13 · Team Injury Links</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
 <div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
@@ -381,10 +381,42 @@ function select(a){
   save();render()
 }
 
-const NFL_INJURY_CODE={LVR:'lv'};
+const TEAM_INJURY_URL={
+  ARI:'https://www.azcardinals.com/team/injury-report/',
+  ATL:'https://www.atlantafalcons.com/team/injury-report/',
+  BAL:'https://www.baltimoreravens.com/team/injury-report/',
+  BUF:'https://www.buffalobills.com/team/injury-report/',
+  CAR:'https://www.panthers.com/team/injury-report/',
+  CHI:'https://www.chicagobears.com/team/injury-report/',
+  CIN:'https://www.bengals.com/team/injury-report/',
+  CLE:'https://www.clevelandbrowns.com/team/injury-report/',
+  DAL:'https://www.dallascowboys.com/team/injury-report/',
+  DEN:'https://www.denverbroncos.com/team/injury-report/',
+  DET:'https://www.detroitlions.com/team/injury-report/',
+  GB:'https://www.packers.com/team/injury-report/',
+  HOU:'https://www.houstontexans.com/team/injury-report/',
+  IND:'https://www.colts.com/team/injury-report/',
+  JAX:'https://www.jaguars.com/team/injury-report/',
+  KC:'https://www.chiefs.com/team/injury-report/',
+  LVR:'https://www.raiders.com/team/injury-report/',
+  LAC:'https://www.chargers.com/team/injury-report/',
+  LAR:'https://www.therams.com/team/injury-report/',
+  MIA:'https://www.miamidolphins.com/team/injury-report/',
+  MIN:'https://www.vikings.com/team/injury-report/',
+  NE:'https://www.patriots.com/team/injury-report/',
+  NO:'https://www.neworleanssaints.com/team/injury-report/',
+  NYG:'https://www.giants.com/team/injury-report/',
+  NYJ:'https://www.newyorkjets.com/team/injury-report/',
+  PHI:'https://www.philadelphiaeagles.com/team/injury-report/',
+  PIT:'https://www.steelers.com/team/injury-report/',
+  SF:'https://www.49ers.com/team/injury-report/',
+  SEA:'https://www.seahawks.com/team/injury-report/',
+  TB:'https://www.buccaneers.com/team/injury-report/',
+  TEN:'https://www.tennesseetitans.com/team/injury-report/',
+  WAS:'https://www.commanders.com/team/injury-report/'
+};
 function injuryUrl(a){
-  let code=(NFL_INJURY_CODE[a]||a).toLowerCase();
-  return 'https://www.nfl.com/injuries/?team='+encodeURIComponent(code)
+  return TEAM_INJURY_URL[a]||'https://www.nfl.com/injuries/';
 }
 function teams(){
   let g=document.getElementById('grid');g.innerHTML='';
