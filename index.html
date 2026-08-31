@@ -31,8 +31,8 @@
 <option value="ats_limited">Against the Spread — Limited</option>
 <option value="custom">Custom</option>
 </select></div>
-<div id="maxRow" class="row"><span>Maximum uses per team</span><select id="maxUses"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option value="99">Unlimited</option></select></div>
-<div id="ppwRow" class="row"><span>Picks allowed per week</span><select id="ppw"><option value="1">1 (Suicide)</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option><option value="99">Unlimited</option></select></div>
+<div id="maxRow" class="row"><span>Maximum uses per team</span><select id="maxUses"><option value="1">1 (Suicide)</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option value="99">Unlimited</option></select></div>
+<div id="ppwRow" class="row"><span>Picks allowed per week</span><select id="ppw"><option value="1">1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option><option value="99">Unlimited</option></select></div>
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
@@ -67,7 +67,7 @@ ws.value=week;
 function save(){localStorage.setItem(POOLS_KEY,JSON.stringify(pools));localStorage.setItem(ACTIVE_KEY,activeId);localStorage.setItem(WEEK_KEY,week)}
 
 function poolTypeText(p){
-  if(p.type==='limited')return 'Limited Pick'+(Number(p.picksPerWeek)===1?' (Suicide)':'')+' · '+(Number(p.picksPerWeek)>=99?'Unlimited':p.picksPerWeek)+' pick'+(Number(p.picksPerWeek)===1?'':'s')+'/week · '+(Number(p.maxUses)>=99?'Unlimited team use':p.maxUses+' use'+(Number(p.maxUses)===1?'':'s')+'/team');
+  if(p.type==='limited')return 'Limited Pick'+(Number(p.maxUses)===1?' (Suicide)':'')+' · '+(Number(p.picksPerWeek)>=99?'Unlimited':p.picksPerWeek)+' pick'+(Number(p.picksPerWeek)===1?'':'s')+'/week · '+(Number(p.maxUses)>=99?'Unlimited team use':p.maxUses+' use'+(Number(p.maxUses)===1?'':'s')+'/team');
   if(p.type==='ats_all')return 'Against the Spread — All games';
   if(p.type==='ats_limited')return 'Against the Spread — '+p.picksPerWeek+' game'+(Number(p.picksPerWeek)===1?'':'s')+'/week';
   return 'Custom · '+(Number(p.picksPerWeek)>=99?'Unlimited':p.picksPerWeek)+' pick'+(Number(p.picksPerWeek)===1?'':'s')+'/week · '+(Number(p.maxUses)>=99?'Unlimited team use':p.maxUses+' use'+(Number(p.maxUses)===1?'':'s')+'/team');
@@ -149,7 +149,7 @@ function games(){
 }
 function typeLabel(){
   let p=P();
-  if(p.type==='limited')return 'Limited Pick'+(Number(p.picksPerWeek)===1?' (Suicide)':'');
+  if(p.type==='limited')return 'Limited Pick'+(Number(p.maxUses)===1?' (Suicide)':'');
   if(p.type==='ats_all')return 'Against the Spread — All';
   if(p.type==='ats_limited')return 'Against the Spread — Limited';
   return 'Custom';
@@ -189,7 +189,7 @@ function ruleUI(){
   mu.disabled=t==='ats_all'||t==='ats_limited';
   ppwRow.classList.toggle('disabled',t==='ats_all');
   pp.disabled=t==='ats_all';
-  if(t==='limited')hint.textContent='One pick per week is the usual “Suicide” format.';
+  if(t==='limited')hint.textContent='A maximum of 1 use per team is the “Suicide” restriction; picks per week is set separately.';
   else if(t==='ats_all')hint.textContent='Choose one side in every game. The spread is captured when you make each pick.';
   else if(t==='ats_limited')hint.textContent='Choose a fixed number of games against the spread. One side per game.';
   else hint.textContent='Set the weekly pick limit and team-use limit independently.';
