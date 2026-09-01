@@ -577,9 +577,9 @@
       "source": "Consensus (2 books)"
     },
     "Green Bay Packers @ Minnesota Vikings": {
-      "away": 1,
+      "away": 1.5,
       "bookmakers": 9,
-      "home": -1,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     },
     "Green Bay Packers @ New England Patriots": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-01T12:32:15.292686+00:00"
+  "updated": "2026-09-01T15:47:24.310474+00:00"
 }
