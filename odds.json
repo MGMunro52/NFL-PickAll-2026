@@ -163,10 +163,10 @@
       "source": "Consensus (1 books)"
     },
     "Buffalo Bills @ Houston Texans": {
-      "away": 0,
-      "bookmakers": 9,
-      "home": 0,
-      "source": "Consensus (9 books)"
+      "away": -0.5,
+      "bookmakers": 8,
+      "home": 0.5,
+      "source": "Consensus (8 books)"
     },
     "Buffalo Bills @ Las Vegas Raiders": {
       "away": -6.5,
@@ -577,9 +577,9 @@
       "source": "Consensus (2 books)"
     },
     "Green Bay Packers @ Minnesota Vikings": {
-      "away": 1.5,
+      "away": 1,
       "bookmakers": 9,
-      "home": -1.5,
+      "home": -1,
       "source": "Consensus (9 books)"
     },
     "Green Bay Packers @ New England Patriots": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-01T00:37:16.849725+00:00"
+  "updated": "2026-09-01T03:27:21.908305+00:00"
 }
