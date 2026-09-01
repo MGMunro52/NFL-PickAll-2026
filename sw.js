@@ -1,4 +1,4 @@
-const CACHE='nfl-pools-2026-build19';
+const CACHE='nfl-pools-2026-build20';
 const APP_SHELL=[
   './',
   './index.html',
