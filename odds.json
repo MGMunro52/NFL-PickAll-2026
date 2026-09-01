@@ -973,9 +973,9 @@
       "source": "Consensus (1 books)"
     },
     "Los Angeles Rams @ Washington Commanders": {
-      "away": -4.5,
+      "away": -5.5,
       "bookmakers": 1,
-      "home": 4.5,
+      "home": 5.5,
       "source": "Consensus (1 books)"
     },
     "Miami Dolphins @ Buffalo Bills": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-01T06:32:52.616311+00:00"
+  "updated": "2026-09-01T09:28:26.117499+00:00"
 }
