@@ -1447,9 +1447,9 @@
       "source": "Consensus (2 books)"
     },
     "Seattle Seahawks @ Denver Broncos": {
-      "away": -2,
+      "away": -2.5,
       "bookmakers": 2,
-      "home": 2,
+      "home": 2.5,
       "source": "Consensus (2 books)"
     },
     "Seattle Seahawks @ Las Vegas Raiders": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-01T03:27:21.908305+00:00"
+  "updated": "2026-09-01T06:32:52.616311+00:00"
 }
