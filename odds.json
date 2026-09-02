@@ -805,9 +805,9 @@
       "source": "Consensus (2 books)"
     },
     "Kansas City Chiefs @ Los Angeles Rams": {
-      "away": 3.5,
+      "away": 4.5,
       "bookmakers": 1,
-      "home": -3.5,
+      "home": -4.5,
       "source": "Consensus (1 books)"
     },
     "Kansas City Chiefs @ Miami Dolphins": {
@@ -1417,9 +1417,9 @@
       "source": "Consensus (2 books)"
     },
     "San Francisco 49ers @ Los Angeles Rams": {
-      "away": 3.5,
+      "away": 4,
       "bookmakers": 9,
-      "home": -3.5,
+      "home": -4,
       "source": "Consensus (9 books)"
     },
     "San Francisco 49ers @ New York Giants": {
@@ -1615,9 +1615,9 @@
       "source": "Consensus (1 books)"
     },
     "Washington Commanders @ Philadelphia Eagles": {
-      "away": 4.5,
+      "away": 5,
       "bookmakers": 9,
-      "home": -4.5,
+      "home": -5,
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ San Francisco 49ers": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-02T15:30:55.082920+00:00"
+  "updated": "2026-09-02T18:30:10.174919+00:00"
 }
