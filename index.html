@@ -50,7 +50,7 @@
 <p id="gateText">Checking your account…</p>
 <button id="gatePrimary">Unlock</button>
 <button id="gatePassword" class="gate-secondary" style="display:none">Use password</button>
-<div class="gate-build">Build 20</div>
+<div class="gate-build">Build 21</div>
 </div></div><div id="offlineNote" class="offline-note">Offline · using saved data</div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -73,7 +73,7 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 20 · Pick History</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 21 · Pick History Rules</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
 <div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
@@ -496,16 +496,16 @@ function teams(){
   for(const t of TEAMS){
     let k=count(t.abbr),m=Number(P().maxUses),d=document.createElement('button');
     d.type='button';d.className='chip'+(!isATS()&&m<99&&k===m?' max':'');d.style.background=t.color;
-    let pw=pickedWeeks(t.abbr);
-    d.setAttribute('aria-label',t.name+'. '+k+' selections this season'+(pw.length?'. Picked '+pw.join(', '):''));
-    d.title=pw.length?'Picked '+pw.join(', '):'Not picked yet';
-    d.innerHTML=t.abbr+'<span>'+k+'</span><span class="pickweeks">'+(pw.length?'Picked: '+pw.join(', '):'Not picked')+'</span>';
+    let pw=pickedWeeks(t.abbr),showHistory=P().type!=='ats_all';
+    d.setAttribute('aria-label',t.name+'. '+k+' selections this season'+(showHistory&&pw.length?'. Picked '+pw.join(', '):''));
+    d.title=showHistory?(pw.length?'Picked '+pw.join(', '):'Not picked yet'):t.name;
+    d.innerHTML=t.abbr+'<span>'+k+'</span>'+(showHistory?'<span class="pickweeks">'+(pw.length?'Picked: '+pw.join(', '):'Not picked')+'</span>':'');
     d.onclick=null;
     g.appendChild(d)
   }
   let leg=document.getElementById('legend');
   let base=isATS()?'Numbers = selections this season':(Number(P().maxUses)>=99?'Unlimited':'Max '+P().maxUses+' per team')+' · amber = limit';
-  leg.textContent=base+' · team tiles show weeks already picked';
+  leg.textContent=P().type==='ats_all'?base:base+' · team tiles show weeks already picked';
 }
 const SPECIAL_GAME_LOCATIONS={"1-SF-LAR":"Melbourne, Australia","3-BAL-DAL":"Rio de Janeiro, Brazil","4-IND-WAS":"London, U.K.","5-PHI-JAX":"London, U.K.","6-HOU-JAX":"London, U.K.","7-PIT-NO":"Paris, France","9-CIN-ATL":"Madrid, Spain","10-NE-DET":"Munich, Germany","11-MIN-SF":"Mexico City, Mexico"};
 function specialGameLocation(g){return SPECIAL_GAME_LOCATIONS[week+'-'+g.awayAbbr+'-'+g.homeAbbr]||''}
