@@ -385,9 +385,9 @@
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ New York Jets": {
-      "away": 2.5,
+      "away": 1.5,
       "bookmakers": 1,
-      "home": -2.5,
+      "home": -1.5,
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ Pittsburgh Steelers": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-03T12:33:11.156965+00:00"
+  "updated": "2026-09-03T15:29:46.037118+00:00"
 }
