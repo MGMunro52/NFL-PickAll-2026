@@ -25,7 +25,7 @@
 .authmsg{min-height:18px;color:#475569;font-size:12px;margin-top:9px}.authmsg.err{color:#b91c1c}.synced{color:#166534}.localonly{color:#64748b}
 .accountrow{display:flex;align-items:center;gap:8px;margin:10px 0 4px;padding:10px;background:#f8fafc;border-radius:10px}.accountrow b{flex:1;overflow:hidden;text-overflow:ellipsis}
 
-.topsync{font-size:10px;color:#64748b;white-space:nowrap;max-width:115px;overflow:hidden;text-overflow:ellipsis}
+.topsync{font-size:10px;color:#64748b;white-space:nowrap;max-width:115px;overflow:hidden;text-overflow:ellipsis}.toolbar .accountavatar{width:38px;height:38px;min-width:38px;padding:0;border-radius:50%;font-size:12px;font-weight:900;letter-spacing:.2px;background:#0b172a;color:#fff;border:0}
 .topsync.ok{color:#166534}.topsync.busy{color:#92400e}
 @media(max-width:520px){.topsync{display:none}}
 
@@ -50,7 +50,7 @@
 <p id="gateText">Checking your account…</p>
 <button id="gatePrimary">Unlock</button>
 <button id="gatePassword" class="gate-secondary" style="display:none">Use password</button>
-<div class="gate-build">Build 21</div>
+<div class="gate-build">Build 22</div>
 </div></div><div id="offlineNote" class="offline-note">Offline · using saved data</div><div id="poolHome" class="poolhome authhidden"><div class="poolhome-inner">
 <div class="brandhero">
 <div class="ballmark" aria-hidden="true"><div class="laces">━╋━</div></div>
@@ -60,7 +60,7 @@
 <div id="poolCards" class="poolcards"></div>
 <div class="poolhome-actions"><button id="homeNewPool" class="primary">＋ New Pool</button><button id="homeAccount">Account</button></div>
 <div class="poolfoot"><span id="syncStatus" class="localonly">Checking account…</span><br>Independent pool tracker — not affiliated with the NFL.</div>
-</div></div><div id="mainApp" class="app authhidden"><section class="top"><div class="toolbar"><button id="poolsHome">Pools</button><select id="poolSelect" class="poolselect"></select><button id="newPool" title="New pool">＋</button><select id="week"></select><button id="prev">◀</button><button id="next">▶</button><div class="spacer"></div><span id="topSync" class="topsync">Local</span><button id="accountTop">Account</button><button id="rules">⚙︎ Rules</button></div><div id="summary" class="summary"></div><div id="games" class="games"></div></section><section class="bottom"><div class="bh"><div><b>Season picks</b><div id="legend" class="legend"></div></div><div class="right"><button id="clear">Clear week</button><button id="reset">Reset</button></div></div><div id="grid" class="grid"></div></section></div><div id="drawer" class="drawer"><div class="panel"><h3>Pool rules</h3>
+</div></div><div id="mainApp" class="app authhidden"><section class="top"><div class="toolbar"><button id="poolsHome">Pools</button><select id="poolSelect" class="poolselect"></select><button id="newPool" title="New pool">＋</button><select id="week"></select><button id="prev">◀</button><button id="next">▶</button><div class="spacer"></div><button id="rules">⚙︎ Rules</button><span id="topSync" class="topsync">Local</span><button id="accountTop" class="accountavatar" aria-label="Account" title="Account">AC</button></div><div id="summary" class="summary"></div><div id="games" class="games"></div></section><section class="bottom"><div class="bh"><div><b>Season picks</b><div id="legend" class="legend"></div></div><div class="right"><button id="clear">Clear week</button><button id="reset">Reset</button></div></div><div id="grid" class="grid"></div></section></div><div id="drawer" class="drawer"><div class="panel"><h3>Pool rules</h3>
 <div class="row"><span>Pool name</span><input id="poolName" class="poolname" maxlength="40"></div>
 <div class="row"><span>Pool type</span><select id="poolType">
 <option value="limited">Limited Pick</option>
@@ -73,7 +73,7 @@
 <div class="row"><span>Point spreads</span><select id="spreadMode"><option value="auto">Automatic consensus</option><option value="off">Hide</option></select></div>
 <div id="ruleHint" class="muted"></div>
 <button id="done" class="done">Done</button>
-<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 21 · Pick History Rules</div>
+<button id="deletePool" class="danger">Delete this pool</button><div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:8px">Build 22 · Account Header</div>
 </div></div><div id="authBox" class="authbox"><div class="authpanel">
 <h3>Account</h3>
 <div class="authsub">Sign in to access your pools. Your picks synchronize automatically across devices.</div>
@@ -343,10 +343,23 @@ async function deleteCloudPool(p){
   const {error}=await sb.from('pools').delete().eq('id',p.cloudId);
   if(error)throw error
 }
+function accountInitials(){
+  if(!currentUser)return 'AC';
+  let m=currentUser.user_metadata||{},name=(m.full_name||m.name||'').trim();
+  if(name){let p=name.split(/\s+/).filter(Boolean);return ((p[0]?.[0]||'')+(p.length>1?(p[p.length-1]?.[0]||''):'')).toUpperCase()||'AC'}
+  let e=(currentUser.email||'').split('@')[0],parts=e.split(/[._\-\s]+/).filter(Boolean);
+  if(parts.length>1)return (parts[0][0]+parts[parts.length-1][0]).toUpperCase();
+  return e.slice(0,2).toUpperCase()||'AC'
+}
+function updateAccountTop(){
+  let b=document.getElementById('accountTop');if(!b)return;
+  b.textContent=accountInitials();b.title=currentUser?(currentUser.email||'Account'):'Account'
+}
 function updateAuthUI(){
   let out=document.getElementById('signedOutUI'),inn=document.getElementById('signedInUI'),em=document.getElementById('accountEmail');
   if(currentUser){out.style.display='none';inn.style.display='block';em.textContent=currentUser.email||currentUser.id}
   else{out.style.display='block';inn.style.display='none'}
+  updateAccountTop();
   updatePasskeyUI();
   updateOfflineBioUI();
   if(!appUnlocked)setGateMode()
