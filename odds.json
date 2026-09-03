@@ -163,9 +163,9 @@
       "source": "Consensus (1 books)"
     },
     "Buffalo Bills @ Houston Texans": {
-      "away": -1,
+      "away": 0,
       "bookmakers": 9,
-      "home": 1,
+      "home": 0,
       "source": "Consensus (9 books)"
     },
     "Buffalo Bills @ Las Vegas Raiders": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-03T15:29:46.037118+00:00"
+  "updated": "2026-09-03T18:30:16.618157+00:00"
 }
