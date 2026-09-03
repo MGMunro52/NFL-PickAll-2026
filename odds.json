@@ -397,9 +397,9 @@
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ Tampa Bay Buccaneers": {
-      "away": 6,
+      "away": 6.5,
       "bookmakers": 2,
-      "home": -6,
+      "home": -6.5,
       "source": "Consensus (2 books)"
     },
     "Cleveland Browns @ Tennessee Titans": {
@@ -739,9 +739,9 @@
       "source": "Consensus (1 books)"
     },
     "Jacksonville Jaguars @ Denver Broncos": {
-      "away": 2.5,
+      "away": 2.75,
       "bookmakers": 2,
-      "home": -2.5,
+      "home": -2.75,
       "source": "Consensus (2 books)"
     },
     "Jacksonville Jaguars @ Houston Texans": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-02T21:25:03.810636+00:00"
+  "updated": "2026-09-03T00:36:38.994760+00:00"
 }
