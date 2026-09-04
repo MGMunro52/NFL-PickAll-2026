@@ -1231,9 +1231,9 @@
       "source": "Consensus (2 books)"
     },
     "New York Jets @ Arizona Cardinals": {
-      "away": 1.5,
+      "away": -1.5,
       "bookmakers": 1,
-      "home": -1.5,
+      "home": 1.5,
       "source": "Consensus (1 books)"
     },
     "New York Jets @ Buffalo Bills": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-03T21:25:24.089749+00:00"
+  "updated": "2026-09-04T00:33:40.283426+00:00"
 }
