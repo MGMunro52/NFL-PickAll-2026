@@ -128,7 +128,7 @@ def make_game_frame(sched, roll):
     s = s.merge(home, on="game_id", how="left").merge(away, on="game_id", how="left")
     s = s[(s.home_team == s.home_team_roll) & (s.away_team == s.away_team_roll)].copy()
 
-    base = [c[5:] for c in home.columns if c.startswith("home_")]
+    base = [c[5:] for c in home.columns if c.startswith("home_") and c != "home_team_roll"]
     for c in base:
         if "home_"+c in s and "away_"+c in s:
             # For offense, home-away. For defensive EPA allowed, lower is better, so away-home.
