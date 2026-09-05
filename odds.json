@@ -1417,9 +1417,9 @@
       "source": "Consensus (2 books)"
     },
     "San Francisco 49ers @ Los Angeles Rams": {
-      "away": 4,
+      "away": 3.5,
       "bookmakers": 9,
-      "home": -4,
+      "home": -3.5,
       "source": "Consensus (9 books)"
     },
     "San Francisco 49ers @ New York Giants": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-05T12:29:18.409240+00:00"
+  "updated": "2026-09-05T15:24:36.442567+00:00"
 }
