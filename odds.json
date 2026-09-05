@@ -265,9 +265,9 @@
       "source": "Consensus (1 books)"
     },
     "Chicago Bears @ Carolina Panthers": {
-      "away": -2.5,
+      "away": -3,
       "bookmakers": 9,
-      "home": 2.5,
+      "home": 3,
       "source": "Consensus (9 books)"
     },
     "Chicago Bears @ Detroit Lions": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-05T06:29:28.850585+00:00"
+  "updated": "2026-09-05T09:24:24.903983+00:00"
 }
