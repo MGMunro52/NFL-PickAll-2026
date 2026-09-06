@@ -1225,9 +1225,9 @@
       "source": "Consensus (1 books)"
     },
     "New York Giants @ Washington Commanders": {
-      "away": 2,
+      "away": 2.5,
       "bookmakers": 2,
-      "home": -2,
+      "home": -2.5,
       "source": "Consensus (2 books)"
     },
     "New York Jets @ Arizona Cardinals": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-06T06:30:19.659947+00:00"
+  "updated": "2026-09-06T09:25:29.804000+00:00"
 }
