@@ -13,9 +13,9 @@
       "source": "Consensus (2 books)"
     },
     "Arizona Cardinals @ Los Angeles Chargers": {
-      "away": 10,
+      "away": 9.5,
       "bookmakers": 9,
-      "home": -10,
+      "home": -9.5,
       "source": "Consensus (9 books)"
     },
     "Arizona Cardinals @ Los Angeles Rams": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-07T18:29:40.734038+00:00"
+  "updated": "2026-09-07T21:26:19.499473+00:00"
 }
