@@ -14,9 +14,9 @@
     },
     "Arizona Cardinals @ Los Angeles Chargers": {
       "away": 10,
-      "bookmakers": 9,
+      "bookmakers": 8,
       "home": -10,
-      "source": "Consensus (9 books)"
+      "source": "Consensus (8 books)"
     },
     "Arizona Cardinals @ Los Angeles Rams": {
       "away": 13.5,
@@ -1471,9 +1471,9 @@
       "source": "Consensus (2 books)"
     },
     "Seattle Seahawks @ San Francisco 49ers": {
-      "away": 0,
+      "away": 1.5,
       "bookmakers": 2,
-      "home": 0,
+      "home": -1.5,
       "source": "Consensus (2 books)"
     },
     "Seattle Seahawks @ Washington Commanders": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-07T09:29:38.247039+00:00"
+  "updated": "2026-09-07T12:33:47.225507+00:00"
 }
