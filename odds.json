@@ -1129,9 +1129,9 @@
       "source": "Consensus (1 books)"
     },
     "New England Patriots @ Seattle Seahawks": {
-      "away": 3.5,
+      "away": 3,
       "bookmakers": 9,
-      "home": -3.5,
+      "home": -3,
       "source": "Consensus (9 books)"
     },
     "New Orleans Saints @ Atlanta Falcons": {
@@ -1279,9 +1279,9 @@
       "source": "Consensus (1 books)"
     },
     "New York Jets @ Tennessee Titans": {
-      "away": 1,
+      "away": 1.5,
       "bookmakers": 9,
-      "home": -1,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     },
     "Philadelphia Eagles @ Arizona Cardinals": {
@@ -1633,5 +1633,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-08T06:32:43.726939+00:00"
+  "updated": "2026-09-08T09:28:19.634325+00:00"
 }
