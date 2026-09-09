@@ -1268,9 +1268,9 @@
     },
     "New York Jets @ Tennessee Titans": {
       "away": 1.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": -1.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Philadelphia Eagles @ Arizona Cardinals": {
       "away": -8.5,
@@ -1603,9 +1603,9 @@
       "source": "Consensus (1 books)"
     },
     "Washington Commanders @ Philadelphia Eagles": {
-      "away": 5,
+      "away": 4.5,
       "bookmakers": 9,
-      "home": -5,
+      "home": -4.5,
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ San Francisco 49ers": {
@@ -1621,5 +1621,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-09T00:37:13.277718+00:00"
+  "updated": "2026-09-09T03:27:32.094621+00:00"
 }
