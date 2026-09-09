@@ -1603,9 +1603,9 @@
       "source": "Consensus (1 books)"
     },
     "Washington Commanders @ Philadelphia Eagles": {
-      "away": 4.5,
+      "away": 5,
       "bookmakers": 9,
-      "home": -4.5,
+      "home": -5,
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ San Francisco 49ers": {
@@ -1621,5 +1621,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-09T03:27:32.094621+00:00"
+  "updated": "2026-09-09T06:33:32.415339+00:00"
 }
