@@ -906,6 +906,12 @@
       "home": 5.5,
       "source": "Consensus (1 books)"
     },
+    "Los Angeles Chargers @ Los Angeles Rams": {
+      "away": 3.5,
+      "bookmakers": 1,
+      "home": -3.5,
+      "source": "Consensus (1 books)"
+    },
     "Los Angeles Chargers @ Miami Dolphins": {
       "away": -7,
       "bookmakers": 1,
@@ -916,6 +922,12 @@
       "away": 3,
       "bookmakers": 2,
       "home": -3,
+      "source": "Consensus (2 books)"
+    },
+    "Los Angeles Chargers @ Tampa Bay Buccaneers": {
+      "away": -2,
+      "bookmakers": 2,
+      "home": 2,
       "source": "Consensus (2 books)"
     },
     "Los Angeles Rams @ Arizona Cardinals": {
@@ -943,9 +955,9 @@
       "source": "Consensus (1 books)"
     },
     "Los Angeles Rams @ San Francisco 49ers": {
-      "away": -2.5,
+      "away": -1.5,
       "bookmakers": 1,
-      "home": 2.5,
+      "home": 1.5,
       "source": "Consensus (1 books)"
     },
     "Los Angeles Rams @ Seattle Seahawks": {
@@ -961,9 +973,9 @@
       "source": "Consensus (1 books)"
     },
     "Los Angeles Rams @ Washington Commanders": {
-      "away": -4.5,
+      "away": -5.5,
       "bookmakers": 1,
-      "home": 4.5,
+      "home": 5.5,
       "source": "Consensus (1 books)"
     },
     "Miami Dolphins @ Buffalo Bills": {
@@ -1256,9 +1268,9 @@
     },
     "New York Jets @ Tennessee Titans": {
       "away": 1.5,
-      "bookmakers": 9,
+      "bookmakers": 8,
       "home": -1.5,
-      "source": "Consensus (9 books)"
+      "source": "Consensus (8 books)"
     },
     "Philadelphia Eagles @ Arizona Cardinals": {
       "away": -8.5,
@@ -1609,5 +1621,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-08T21:24:40.757109+00:00"
+  "updated": "2026-09-09T00:37:13.277718+00:00"
 }
