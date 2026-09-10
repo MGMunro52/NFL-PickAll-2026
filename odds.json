@@ -1309,9 +1309,9 @@
       "source": "Consensus (1 books)"
     },
     "Tampa Bay Buccaneers @ Cincinnati Bengals": {
-      "away": 4,
+      "away": 3.5,
       "bookmakers": 9,
-      "home": -4,
+      "home": -3.5,
       "source": "Consensus (9 books)"
     },
     "Tampa Bay Buccaneers @ Dallas Cowboys": {
@@ -1417,9 +1417,9 @@
       "source": "Consensus (1 books)"
     },
     "Washington Commanders @ Philadelphia Eagles": {
-      "away": 5.5,
+      "away": 5,
       "bookmakers": 9,
-      "home": -5.5,
+      "home": -5,
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ San Francisco 49ers": {
@@ -1435,5 +1435,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-10T09:27:59.683369+00:00"
+  "updated": "2026-09-10T12:33:29.648170+00:00"
 }
