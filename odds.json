@@ -446,9 +446,9 @@
     },
     "Denver Broncos @ Kansas City Chiefs": {
       "away": 2.5,
-      "bookmakers": 9,
+      "bookmakers": 8,
       "home": -2.5,
-      "source": "Consensus (9 books)"
+      "source": "Consensus (8 books)"
     },
     "Denver Broncos @ Las Vegas Raiders": {
       "away": -4.5,
@@ -805,9 +805,9 @@
       "source": "Consensus (1 books)"
     },
     "Las Vegas Raiders @ Los Angeles Chargers": {
-      "away": 9.25,
+      "away": 9.5,
       "bookmakers": 6,
-      "home": -9.25,
+      "home": -9.5,
       "source": "Consensus (6 books)"
     },
     "Las Vegas Raiders @ New Orleans Saints": {
@@ -1435,5 +1435,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-10T12:33:29.648170+00:00"
+  "updated": "2026-09-10T15:28:06.178402+00:00"
 }
