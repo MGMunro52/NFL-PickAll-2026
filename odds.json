@@ -1008,17 +1008,11 @@
       "home": -1.5,
       "source": "Consensus (2 books)"
     },
-    "New England Patriots @ Miami Dolphins": {
-      "away": -7,
-      "bookmakers": 1,
-      "home": 7,
-      "source": "Consensus (1 books)"
-    },
     "New England Patriots @ Seattle Seahawks": {
-      "away": 3,
-      "bookmakers": 9,
-      "home": -3,
-      "source": "Consensus (9 books)"
+      "away": -0.5,
+      "bookmakers": 2,
+      "home": 0.5,
+      "source": "Consensus (2 books)"
     },
     "New Orleans Saints @ Atlanta Falcons": {
       "away": 1.5,
@@ -1230,12 +1224,6 @@
       "home": -3,
       "source": "Consensus (2 books)"
     },
-    "Pittsburgh Steelers @ New England Patriots": {
-      "away": 5,
-      "bookmakers": 4,
-      "home": -5,
-      "source": "Consensus (4 books)"
-    },
     "Pittsburgh Steelers @ New Orleans Saints": {
       "away": -2.5,
       "bookmakers": 2,
@@ -1301,12 +1289,6 @@
       "bookmakers": 1,
       "home": 3,
       "source": "Consensus (1 books)"
-    },
-    "Seattle Seahawks @ Arizona Cardinals": {
-      "away": -10,
-      "bookmakers": 4,
-      "home": 10,
-      "source": "Consensus (4 books)"
     },
     "Tampa Bay Buccaneers @ Atlanta Falcons": {
       "away": -1.5,
@@ -1459,5 +1441,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-10T00:33:23.984453+00:00"
+  "updated": "2026-09-10T03:27:56.985724+00:00"
 }
