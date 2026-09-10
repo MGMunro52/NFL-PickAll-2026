@@ -73,9 +73,9 @@
       "source": "Consensus (2 books)"
     },
     "Atlanta Falcons @ Pittsburgh Steelers": {
-      "away": 4,
+      "away": 4.5,
       "bookmakers": 9,
-      "home": -4,
+      "home": -4.5,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
@@ -1218,6 +1218,12 @@
       "home": -3,
       "source": "Consensus (2 books)"
     },
+    "Pittsburgh Steelers @ New England Patriots": {
+      "away": 4.5,
+      "bookmakers": 1,
+      "home": -4.5,
+      "source": "Consensus (1 books)"
+    },
     "Pittsburgh Steelers @ New Orleans Saints": {
       "away": -2.5,
       "bookmakers": 2,
@@ -1435,5 +1441,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-10T18:28:56.997747+00:00"
+  "updated": "2026-09-10T21:24:19.840897+00:00"
 }
