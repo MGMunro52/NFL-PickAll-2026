@@ -73,9 +73,9 @@
       "source": "Consensus (2 books)"
     },
     "Atlanta Falcons @ Pittsburgh Steelers": {
-      "away": 3.5,
+      "away": 4,
       "bookmakers": 9,
-      "home": -3.5,
+      "home": -4,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
@@ -157,9 +157,9 @@
       "source": "Consensus (1 books)"
     },
     "Buffalo Bills @ Houston Texans": {
-      "away": -1.5,
+      "away": -1,
       "bookmakers": 9,
-      "home": 1.5,
+      "home": 1,
       "source": "Consensus (9 books)"
     },
     "Buffalo Bills @ Las Vegas Raiders": {
@@ -194,9 +194,9 @@
     },
     "Carolina Panthers @ Atlanta Falcons": {
       "away": 1.5,
-      "bookmakers": 6,
+      "bookmakers": 3,
       "home": -1.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (3 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
       "away": -1.5,
@@ -446,9 +446,9 @@
     },
     "Denver Broncos @ Kansas City Chiefs": {
       "away": 2.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": -2.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Denver Broncos @ Las Vegas Raiders": {
       "away": -4.5,
@@ -967,9 +967,9 @@
       "source": "Consensus (6 books)"
     },
     "Minnesota Vikings @ Chicago Bears": {
-      "away": 3.25,
+      "away": 3,
       "bookmakers": 6,
-      "home": -3.25,
+      "home": -3,
       "source": "Consensus (6 books)"
     },
     "Minnesota Vikings @ Detroit Lions": {
@@ -1309,9 +1309,9 @@
       "source": "Consensus (1 books)"
     },
     "Tampa Bay Buccaneers @ Cincinnati Bengals": {
-      "away": 3.5,
+      "away": 4,
       "bookmakers": 9,
-      "home": -3.5,
+      "home": -4,
       "source": "Consensus (9 books)"
     },
     "Tampa Bay Buccaneers @ Dallas Cowboys": {
@@ -1417,9 +1417,9 @@
       "source": "Consensus (1 books)"
     },
     "Washington Commanders @ Philadelphia Eagles": {
-      "away": 5,
+      "away": 5.5,
       "bookmakers": 9,
-      "home": -5,
+      "home": -5.5,
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ San Francisco 49ers": {
@@ -1435,5 +1435,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-10T15:28:06.178402+00:00"
+  "updated": "2026-09-10T18:28:56.997747+00:00"
 }
