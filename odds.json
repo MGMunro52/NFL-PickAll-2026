@@ -157,9 +157,9 @@
       "source": "Consensus (1 books)"
     },
     "Buffalo Bills @ Houston Texans": {
-      "away": -1,
+      "away": -1.5,
       "bookmakers": 9,
-      "home": 1,
+      "home": 1.5,
       "source": "Consensus (9 books)"
     },
     "Buffalo Bills @ Las Vegas Raiders": {
@@ -1417,9 +1417,9 @@
       "source": "Consensus (1 books)"
     },
     "Washington Commanders @ Philadelphia Eagles": {
-      "away": 5,
+      "away": 5.5,
       "bookmakers": 9,
-      "home": -5,
+      "home": -5.5,
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ San Francisco 49ers": {
@@ -1435,5 +1435,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-10T06:33:05.658042+00:00"
+  "updated": "2026-09-10T09:27:59.683369+00:00"
 }
