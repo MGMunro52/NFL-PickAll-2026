@@ -1008,12 +1008,6 @@
       "home": -1.5,
       "source": "Consensus (2 books)"
     },
-    "New England Patriots @ Seattle Seahawks": {
-      "away": -0.5,
-      "bookmakers": 2,
-      "home": 0.5,
-      "source": "Consensus (2 books)"
-    },
     "New Orleans Saints @ Atlanta Falcons": {
       "away": 1.5,
       "bookmakers": 1,
@@ -1441,5 +1435,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-10T03:27:56.985724+00:00"
+  "updated": "2026-09-10T06:33:05.658042+00:00"
 }
