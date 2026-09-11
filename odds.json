@@ -331,9 +331,9 @@
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ Jacksonville Jaguars": {
-      "away": 8.5,
+      "away": 9,
       "bookmakers": 9,
-      "home": -8.5,
+      "home": -9,
       "source": "Consensus (9 books)"
     },
     "Cleveland Browns @ New Orleans Saints": {
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-11T06:32:16.871720+00:00"
+  "updated": "2026-09-11T09:27:15.382179+00:00"
 }
