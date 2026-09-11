@@ -61,9 +61,9 @@
       "source": "Consensus (2 books)"
     },
     "Atlanta Falcons @ Pittsburgh Steelers": {
-      "away": 4.5,
+      "away": 5,
       "bookmakers": 9,
-      "home": -4.5,
+      "home": -5,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
@@ -1128,12 +1128,6 @@
       "home": 1.5,
       "source": "Consensus (2 books)"
     },
-    "San Francisco 49ers @ Los Angeles Rams": {
-      "away": -19.5,
-      "bookmakers": 4,
-      "home": 19.5,
-      "source": "Consensus (4 books)"
-    },
     "Tampa Bay Buccaneers @ Atlanta Falcons": {
       "away": -1.5,
       "bookmakers": 1,
@@ -1279,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-11T03:27:14.372008+00:00"
+  "updated": "2026-09-11T06:32:16.871720+00:00"
 }
