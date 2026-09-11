@@ -985,9 +985,9 @@
       "source": "Consensus (2 books)"
     },
     "New York Jets @ Arizona Cardinals": {
-      "away": -1.5,
+      "away": 1.5,
       "bookmakers": 1,
-      "home": 1.5,
+      "home": -1.5,
       "source": "Consensus (1 books)"
     },
     "New York Jets @ Buffalo Bills": {
@@ -1100,9 +1100,9 @@
     },
     "Pittsburgh Steelers @ New England Patriots": {
       "away": 4.5,
-      "bookmakers": 1,
+      "bookmakers": 2,
       "home": -4.5,
-      "source": "Consensus (1 books)"
+      "source": "Consensus (2 books)"
     },
     "Pittsburgh Steelers @ New Orleans Saints": {
       "away": -2.5,
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-11T12:32:28.631639+00:00"
+  "updated": "2026-09-11T15:26:53.190875+00:00"
 }
