@@ -175,10 +175,10 @@
       "source": "Consensus (1 books)"
     },
     "Carolina Panthers @ Atlanta Falcons": {
-      "away": 1.5,
-      "bookmakers": 3,
-      "home": -1.5,
-      "source": "Consensus (3 books)"
+      "away": 2,
+      "bookmakers": 6,
+      "home": -2,
+      "source": "Consensus (6 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
       "away": -1.5,
@@ -331,9 +331,9 @@
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ Jacksonville Jaguars": {
-      "away": 9,
+      "away": 8.5,
       "bookmakers": 9,
-      "home": -9,
+      "home": -8.5,
       "source": "Consensus (9 books)"
     },
     "Cleveland Browns @ New Orleans Saints": {
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-11T09:27:15.382179+00:00"
+  "updated": "2026-09-11T12:32:28.631639+00:00"
 }
