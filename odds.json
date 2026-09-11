@@ -61,9 +61,9 @@
       "source": "Consensus (2 books)"
     },
     "Atlanta Falcons @ Pittsburgh Steelers": {
-      "away": 5,
+      "away": 6,
       "bookmakers": 9,
-      "home": -5,
+      "home": -6,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
@@ -175,10 +175,10 @@
       "source": "Consensus (1 books)"
     },
     "Carolina Panthers @ Atlanta Falcons": {
-      "away": 2,
-      "bookmakers": 6,
-      "home": -2,
-      "source": "Consensus (6 books)"
+      "away": 1.5,
+      "bookmakers": 3,
+      "home": -1.5,
+      "source": "Consensus (3 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
       "away": -1.5,
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-11T15:26:53.190875+00:00"
+  "updated": "2026-09-11T18:29:52.120342+00:00"
 }
