@@ -349,9 +349,9 @@
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ New York Jets": {
-      "away": 2.5,
+      "away": 1.5,
       "bookmakers": 1,
-      "home": -2.5,
+      "home": -1.5,
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ Pittsburgh Steelers": {
@@ -464,9 +464,9 @@
     },
     "Detroit Lions @ Buffalo Bills": {
       "away": 3,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -3,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Detroit Lions @ Carolina Panthers": {
       "away": -3,
@@ -668,9 +668,9 @@
     },
     "Jacksonville Jaguars @ Denver Broncos": {
       "away": 3,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -3,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Jacksonville Jaguars @ Houston Texans": {
       "away": 3,
@@ -985,9 +985,9 @@
       "source": "Consensus (2 books)"
     },
     "New York Jets @ Arizona Cardinals": {
-      "away": 1.5,
+      "away": -1.5,
       "bookmakers": 1,
-      "home": -1.5,
+      "home": 1.5,
       "source": "Consensus (1 books)"
     },
     "New York Jets @ Buffalo Bills": {
@@ -1238,9 +1238,9 @@
     },
     "Washington Commanders @ Dallas Cowboys": {
       "away": 4.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -4.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Washington Commanders @ Jacksonville Jaguars": {
       "away": 3.5,
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-12T18:27:03.653314+00:00"
+  "updated": "2026-09-12T21:25:24.475472+00:00"
 }
