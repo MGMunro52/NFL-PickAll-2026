@@ -176,9 +176,9 @@
     },
     "Carolina Panthers @ Atlanta Falcons": {
       "away": 1.5,
-      "bookmakers": 3,
+      "bookmakers": 4,
       "home": -1.5,
-      "source": "Consensus (3 books)"
+      "source": "Consensus (4 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
       "away": -1.5,
@@ -289,10 +289,10 @@
       "source": "Consensus (1 books)"
     },
     "Cincinnati Bengals @ Houston Texans": {
-      "away": 2.75,
-      "bookmakers": 6,
-      "home": -2.75,
-      "source": "Consensus (6 books)"
+      "away": 2.5,
+      "bookmakers": 7,
+      "home": -2.5,
+      "source": "Consensus (7 books)"
     },
     "Cincinnati Bengals @ Indianapolis Colts": {
       "away": -1.5,
@@ -362,9 +362,9 @@
     },
     "Cleveland Browns @ Tampa Bay Buccaneers": {
       "away": 6.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -6.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Cleveland Browns @ Tennessee Titans": {
       "away": 2.5,
@@ -524,9 +524,9 @@
     },
     "Green Bay Packers @ New York Jets": {
       "away": -5.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 5.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Green Bay Packers @ Tampa Bay Buccaneers": {
       "away": -1.5,
@@ -866,9 +866,9 @@
     },
     "Minnesota Vikings @ Chicago Bears": {
       "away": 3,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -3,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Minnesota Vikings @ Detroit Lions": {
       "away": 4.5,
@@ -908,9 +908,9 @@
     },
     "New Orleans Saints @ Baltimore Ravens": {
       "away": 7.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -7.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "New Orleans Saints @ Carolina Panthers": {
       "away": 2.5,
@@ -1064,9 +1064,9 @@
     },
     "Philadelphia Eagles @ Tennessee Titans": {
       "away": -5.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 5.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Philadelphia Eagles @ Washington Commanders": {
       "away": -2,
@@ -1100,9 +1100,9 @@
     },
     "Pittsburgh Steelers @ New England Patriots": {
       "away": 4.5,
-      "bookmakers": 2,
+      "bookmakers": 3,
       "home": -4.5,
-      "source": "Consensus (2 books)"
+      "source": "Consensus (3 books)"
     },
     "Pittsburgh Steelers @ New Orleans Saints": {
       "away": -2.5,
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-12T15:24:41.469151+00:00"
+  "updated": "2026-09-12T18:27:03.653314+00:00"
 }
