@@ -121,9 +121,9 @@
       "source": "Consensus (1 books)"
     },
     "Baltimore Ravens @ Indianapolis Colts": {
-      "away": -3.5,
+      "away": -3,
       "bookmakers": 9,
-      "home": 3.5,
+      "home": 3,
       "source": "Consensus (9 books)"
     },
     "Baltimore Ravens @ Pittsburgh Steelers": {
@@ -763,9 +763,9 @@
       "source": "Consensus (1 books)"
     },
     "Las Vegas Raiders @ Los Angeles Chargers": {
-      "away": 9.5,
+      "away": 9.25,
       "bookmakers": 6,
-      "home": -9.5,
+      "home": -9.25,
       "source": "Consensus (6 books)"
     },
     "Las Vegas Raiders @ New Orleans Saints": {
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-12T12:29:39.719126+00:00"
+  "updated": "2026-09-12T15:24:41.469151+00:00"
 }
