@@ -331,9 +331,9 @@
       "source": "Consensus (1 books)"
     },
     "Cleveland Browns @ Jacksonville Jaguars": {
-      "away": 8.5,
+      "away": 9,
       "bookmakers": 9,
-      "home": -8.5,
+      "home": -9,
       "source": "Consensus (9 books)"
     },
     "Cleveland Browns @ New Orleans Saints": {
@@ -1063,9 +1063,9 @@
       "source": "Consensus (1 books)"
     },
     "Philadelphia Eagles @ Tennessee Titans": {
-      "away": -5,
+      "away": -5.5,
       "bookmakers": 6,
-      "home": 5,
+      "home": 5.5,
       "source": "Consensus (6 books)"
     },
     "Philadelphia Eagles @ Washington Commanders": {
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-11T21:24:49.801924+00:00"
+  "updated": "2026-09-12T00:32:29.458676+00:00"
 }
