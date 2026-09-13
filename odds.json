@@ -61,9 +61,9 @@
       "source": "Consensus (2 books)"
     },
     "Atlanta Falcons @ Pittsburgh Steelers": {
-      "away": 6,
+      "away": 6.5,
       "bookmakers": 9,
-      "home": -6,
+      "home": -6.5,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-13T06:34:10.488745+00:00"
+  "updated": "2026-09-13T09:50:05.045372+00:00"
 }
