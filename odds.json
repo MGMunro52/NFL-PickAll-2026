@@ -176,9 +176,9 @@
     },
     "Carolina Panthers @ Atlanta Falcons": {
       "away": 1.5,
-      "bookmakers": 5,
+      "bookmakers": 4,
       "home": -1.5,
-      "source": "Consensus (5 books)"
+      "source": "Consensus (4 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
       "away": -1.5,
@@ -764,9 +764,9 @@
     },
     "Las Vegas Raiders @ Los Angeles Chargers": {
       "away": 9.5,
-      "bookmakers": 6,
+      "bookmakers": 5,
       "home": -9.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (5 books)"
     },
     "Las Vegas Raiders @ New Orleans Saints": {
       "away": 3.5,
@@ -1100,9 +1100,9 @@
     },
     "Pittsburgh Steelers @ New England Patriots": {
       "away": 4.5,
-      "bookmakers": 4,
+      "bookmakers": 3,
       "home": -4.5,
-      "source": "Consensus (4 books)"
+      "source": "Consensus (3 books)"
     },
     "Pittsburgh Steelers @ New Orleans Saints": {
       "away": -2.5,
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-13T09:50:05.045372+00:00"
+  "updated": "2026-09-13T12:30:19.384276+00:00"
 }
