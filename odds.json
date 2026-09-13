@@ -463,9 +463,9 @@
       "source": "Consensus (1 books)"
     },
     "Detroit Lions @ Buffalo Bills": {
-      "away": 3,
+      "away": 3.5,
       "bookmakers": 7,
-      "home": -3,
+      "home": -3.5,
       "source": "Consensus (7 books)"
     },
     "Detroit Lions @ Carolina Panthers": {
@@ -1273,5 +1273,5 @@
       "source": "Consensus (2 books)"
     }
   },
-  "updated": "2026-09-13T00:34:02.879145+00:00"
+  "updated": "2026-09-13T03:26:32.668324+00:00"
 }
