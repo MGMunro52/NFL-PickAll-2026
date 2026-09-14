@@ -2,9 +2,9 @@
   "games": {
     "Carolina Panthers @ Atlanta Falcons": {
       "away": -1,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 1,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Houston Texans": {
       "away": 3,
@@ -32,15 +32,15 @@
     },
     "Green Bay Packers @ New York Jets": {
       "away": -3.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 3.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Indianapolis Colts @ Kansas City Chiefs": {
       "away": 6.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -6.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Jacksonville Jaguars @ Denver Broncos": {
       "away": 2.75,
@@ -62,9 +62,9 @@
     },
     "Minnesota Vikings @ Chicago Bears": {
       "away": 5.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": -5.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "New Orleans Saints @ Baltimore Ravens": {
       "away": 8.5,
@@ -74,21 +74,21 @@
     },
     "New York Giants @ Los Angeles Rams": {
       "away": 7,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": -7,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Philadelphia Eagles @ Tennessee Titans": {
       "away": -7,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 7,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ New England Patriots": {
-      "away": 5.25,
-      "bookmakers": 8,
-      "home": -5.25,
-      "source": "Consensus (8 books)"
+      "away": 5,
+      "bookmakers": 9,
+      "home": -5,
+      "source": "Consensus (9 books)"
     },
     "Seattle Seahawks @ Arizona Cardinals": {
       "away": -4.5,
@@ -98,10 +98,10 @@
     },
     "Washington Commanders @ Dallas Cowboys": {
       "away": 3.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": -3.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-14T18:30:52.417883+00:00"
+  "updated": "2026-09-14T21:27:08.119227+00:00"
 }
