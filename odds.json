@@ -43,9 +43,9 @@
       "source": "Consensus (6 books)"
     },
     "Jacksonville Jaguars @ Denver Broncos": {
-      "away": 3,
+      "away": 2.75,
       "bookmakers": 8,
-      "home": -3,
+      "home": -2.75,
       "source": "Consensus (8 books)"
     },
     "Las Vegas Raiders @ Los Angeles Chargers": {
@@ -103,5 +103,5 @@
       "source": "Consensus (5 books)"
     }
   },
-  "updated": "2026-09-14T06:34:58.360889+00:00"
+  "updated": "2026-09-14T09:29:30.491503+00:00"
 }
