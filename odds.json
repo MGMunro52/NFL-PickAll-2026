@@ -1,9 +1,9 @@
 {
   "games": {
     "Carolina Panthers @ Atlanta Falcons": {
-      "away": -2,
+      "away": -2.5,
       "bookmakers": 9,
-      "home": 2,
+      "home": 2.5,
       "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Houston Texans": {
@@ -91,11 +91,11 @@
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ Dallas Cowboys": {
-      "away": 3.5,
+      "away": 4,
       "bookmakers": 9,
-      "home": -3.5,
+      "home": -4,
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-15T15:26:37.772290+00:00"
+  "updated": "2026-09-15T18:27:59.821101+00:00"
 }
