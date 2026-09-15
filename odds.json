@@ -1,15 +1,15 @@
 {
   "games": {
     "Carolina Panthers @ Atlanta Falcons": {
-      "away": -1,
+      "away": -2,
       "bookmakers": 9,
-      "home": 1,
+      "home": 2,
       "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Houston Texans": {
-      "away": 3,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     },
     "Cleveland Browns @ Tampa Bay Buccaneers": {
@@ -32,15 +32,15 @@
     },
     "Indianapolis Colts @ Kansas City Chiefs": {
       "away": 6.5,
-      "bookmakers": 7,
+      "bookmakers": 8,
       "home": -6.5,
-      "source": "Consensus (7 books)"
+      "source": "Consensus (8 books)"
     },
     "Jacksonville Jaguars @ Denver Broncos": {
       "away": 2.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": -2.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ Los Angeles Chargers": {
       "away": 7,
@@ -97,5 +97,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-15T12:32:08.287778+00:00"
+  "updated": "2026-09-15T15:26:37.772290+00:00"
 }
