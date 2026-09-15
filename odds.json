@@ -19,10 +19,10 @@
       "source": "Consensus (9 books)"
     },
     "Denver Broncos @ Kansas City Chiefs": {
-      "away": 2,
-      "bookmakers": 9,
-      "home": -2,
-      "source": "Consensus (9 books)"
+      "away": 6.5,
+      "bookmakers": 5,
+      "home": -6.5,
+      "source": "Consensus (5 books)"
     },
     "Detroit Lions @ Buffalo Bills": {
       "away": 4.5,
@@ -35,18 +35,6 @@
       "bookmakers": 9,
       "home": 3.5,
       "source": "Consensus (9 books)"
-    },
-    "Indianapolis Colts @ Kansas City Chiefs": {
-      "away": 6.5,
-      "bookmakers": 7,
-      "home": -6.5,
-      "source": "Consensus (7 books)"
-    },
-    "Jacksonville Jaguars @ Denver Broncos": {
-      "away": 2.75,
-      "bookmakers": 8,
-      "home": -2.75,
-      "source": "Consensus (8 books)"
     },
     "Las Vegas Raiders @ Los Angeles Chargers": {
       "away": 7,
@@ -103,5 +91,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-14T21:27:08.119227+00:00"
+  "updated": "2026-09-15T00:35:30.276691+00:00"
 }
