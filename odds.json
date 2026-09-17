@@ -13,9 +13,9 @@
       "source": "Consensus (7 books)"
     },
     "Baltimore Ravens @ Dallas Cowboys": {
-      "away": -3.5,
+      "away": -3,
       "bookmakers": 6,
-      "home": 3.5,
+      "home": 3,
       "source": "Consensus (6 books)"
     },
     "Carolina Panthers @ Atlanta Falcons": {
@@ -49,9 +49,9 @@
       "source": "Consensus (9 books)"
     },
     "Detroit Lions @ Buffalo Bills": {
-      "away": 5,
+      "away": 5.5,
       "bookmakers": 9,
-      "home": -5,
+      "home": -5.5,
       "source": "Consensus (9 books)"
     },
     "Green Bay Packers @ New York Jets": {
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-17T00:33:36.567386+00:00"
+  "updated": "2026-09-17T03:27:27.414165+00:00"
 }
