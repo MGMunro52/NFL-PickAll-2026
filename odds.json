@@ -79,9 +79,9 @@
       "source": "Consensus (9 books)"
     },
     "Kansas City Chiefs @ Miami Dolphins": {
-      "away": -8.75,
+      "away": -8.5,
       "bookmakers": 6,
-      "home": 8.75,
+      "home": 8.5,
       "source": "Consensus (6 books)"
     },
     "Las Vegas Raiders @ Los Angeles Chargers": {
@@ -97,9 +97,9 @@
       "source": "Consensus (6 books)"
     },
     "Los Angeles Chargers @ Buffalo Bills": {
-      "away": 4.5,
+      "away": 4,
       "bookmakers": 6,
-      "home": -4.5,
+      "home": -4,
       "source": "Consensus (6 books)"
     },
     "Los Angeles Rams @ Denver Broncos": {
@@ -164,9 +164,9 @@
     },
     "Pittsburgh Steelers @ New England Patriots": {
       "away": 5,
-      "bookmakers": 9,
+      "bookmakers": 8,
       "home": -5,
-      "source": "Consensus (9 books)"
+      "source": "Consensus (8 books)"
     },
     "Seattle Seahawks @ Arizona Cardinals": {
       "away": -4,
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-17T03:27:27.414165+00:00"
+  "updated": "2026-09-17T06:33:41.434624+00:00"
 }
