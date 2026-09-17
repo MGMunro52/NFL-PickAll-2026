@@ -8,15 +8,15 @@
     },
     "Atlanta Falcons @ Green Bay Packers": {
       "away": 6.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -6.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Baltimore Ravens @ Dallas Cowboys": {
       "away": -3.5,
-      "bookmakers": 5,
+      "bookmakers": 6,
       "home": 3.5,
-      "source": "Consensus (5 books)"
+      "source": "Consensus (6 books)"
     },
     "Carolina Panthers @ Atlanta Falcons": {
       "away": -2.5,
@@ -151,9 +151,9 @@
       "source": "Consensus (6 books)"
     },
     "Philadelphia Eagles @ Chicago Bears": {
-      "away": 1.25,
+      "away": 1.5,
       "bookmakers": 6,
-      "home": -1.25,
+      "home": -1.5,
       "source": "Consensus (6 books)"
     },
     "Philadelphia Eagles @ Tennessee Titans": {
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-16T21:26:47.889816+00:00"
+  "updated": "2026-09-17T00:33:36.567386+00:00"
 }
