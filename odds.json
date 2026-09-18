@@ -49,15 +49,15 @@
       "source": "Consensus (8 books)"
     },
     "Detroit Lions @ Buffalo Bills": {
-      "away": 8,
-      "bookmakers": 7,
-      "home": -8,
-      "source": "Consensus (7 books)"
+      "away": 10,
+      "bookmakers": 4,
+      "home": -10,
+      "source": "Consensus (4 books)"
     },
     "Green Bay Packers @ New York Jets": {
-      "away": -3.5,
+      "away": -3.25,
       "bookmakers": 8,
-      "home": 3.5,
+      "home": 3.25,
       "source": "Consensus (8 books)"
     },
     "Houston Texans @ Indianapolis Colts": {
@@ -138,12 +138,6 @@
       "home": -7,
       "source": "Consensus (8 books)"
     },
-    "New York Jets @ Detroit Lions": {
-      "away": 7,
-      "bookmakers": 4,
-      "home": -7,
-      "source": "Consensus (4 books)"
-    },
     "Philadelphia Eagles @ Chicago Bears": {
       "away": 1.5,
       "bookmakers": 6,
@@ -187,5 +181,5 @@
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-09-18T00:32:49.650009+00:00"
+  "updated": "2026-09-18T03:26:22.132215+00:00"
 }
