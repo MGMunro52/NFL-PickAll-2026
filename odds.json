@@ -97,9 +97,9 @@
       "source": "Consensus (6 books)"
     },
     "Miami Dolphins @ San Francisco 49ers": {
-      "away": 13.25,
+      "away": 13,
       "bookmakers": 8,
-      "home": -13.25,
+      "home": -13,
       "source": "Consensus (8 books)"
     },
     "Minnesota Vikings @ Chicago Bears": {
@@ -140,9 +140,9 @@
     },
     "Philadelphia Eagles @ Tennessee Titans": {
       "away": -7,
-      "bookmakers": 8,
+      "bookmakers": 7,
       "home": 7,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (7 books)"
     },
     "Pittsburgh Steelers @ New England Patriots": {
       "away": 5,
@@ -175,5 +175,5 @@
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-09-18T12:31:00.995607+00:00"
+  "updated": "2026-09-18T15:26:25.346617+00:00"
 }
