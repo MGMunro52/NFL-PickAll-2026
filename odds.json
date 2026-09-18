@@ -48,12 +48,6 @@
       "home": -8.5,
       "source": "Consensus (8 books)"
     },
-    "Detroit Lions @ Buffalo Bills": {
-      "away": 10,
-      "bookmakers": 4,
-      "home": -10,
-      "source": "Consensus (4 books)"
-    },
     "Green Bay Packers @ New York Jets": {
       "away": -3.25,
       "bookmakers": 8,
@@ -181,5 +175,5 @@
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-09-18T03:26:22.132215+00:00"
+  "updated": "2026-09-18T06:31:49.309064+00:00"
 }
