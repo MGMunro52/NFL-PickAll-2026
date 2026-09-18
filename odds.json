@@ -140,15 +140,15 @@
     },
     "Philadelphia Eagles @ Tennessee Titans": {
       "away": -7,
-      "bookmakers": 7,
+      "bookmakers": 8,
       "home": 7,
-      "source": "Consensus (7 books)"
+      "source": "Consensus (8 books)"
     },
     "Pittsburgh Steelers @ New England Patriots": {
       "away": 5,
-      "bookmakers": 7,
+      "bookmakers": 8,
       "home": -5,
-      "source": "Consensus (7 books)"
+      "source": "Consensus (8 books)"
     },
     "Seattle Seahawks @ Arizona Cardinals": {
       "away": -4,
@@ -175,5 +175,5 @@
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-09-18T09:26:36.123695+00:00"
+  "updated": "2026-09-18T12:31:00.995607+00:00"
 }
