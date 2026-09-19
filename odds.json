@@ -20,9 +20,9 @@
     },
     "Carolina Panthers @ Atlanta Falcons": {
       "away": -2.5,
-      "bookmakers": 8,
+      "bookmakers": 7,
       "home": 2.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (7 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
       "away": -3,
@@ -104,9 +104,9 @@
     },
     "Minnesota Vikings @ Chicago Bears": {
       "away": 4.5,
-      "bookmakers": 8,
+      "bookmakers": 7,
       "home": -4.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (7 books)"
     },
     "Minnesota Vikings @ Tampa Bay Buccaneers": {
       "away": 1.5,
@@ -133,9 +133,9 @@
       "source": "Consensus (8 books)"
     },
     "Philadelphia Eagles @ Chicago Bears": {
-      "away": 1.5,
+      "away": 2,
       "bookmakers": 6,
-      "home": -1.5,
+      "home": -2,
       "source": "Consensus (6 books)"
     },
     "Philadelphia Eagles @ Tennessee Titans": {
@@ -175,5 +175,5 @@
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-09-19T12:29:55.332081+00:00"
+  "updated": "2026-09-19T15:24:33.775406+00:00"
 }
