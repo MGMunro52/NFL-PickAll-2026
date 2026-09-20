@@ -145,9 +145,9 @@
       "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ New England Patriots": {
-      "away": 5.5,
+      "away": 5,
       "bookmakers": 9,
-      "home": -5.5,
+      "home": -5,
       "source": "Consensus (9 books)"
     },
     "Seattle Seahawks @ Arizona Cardinals": {
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-20T06:30:37.113194+00:00"
+  "updated": "2026-09-20T09:25:04.733629+00:00"
 }
