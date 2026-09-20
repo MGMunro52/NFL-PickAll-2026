@@ -61,9 +61,9 @@
       "source": "Consensus (7 books)"
     },
     "Indianapolis Colts @ Kansas City Chiefs": {
-      "away": 6.25,
+      "away": 6,
       "bookmakers": 8,
-      "home": -6.25,
+      "home": -6,
       "source": "Consensus (8 books)"
     },
     "Jacksonville Jaguars @ Denver Broncos": {
@@ -145,9 +145,9 @@
       "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ New England Patriots": {
-      "away": 5,
+      "away": 5.5,
       "bookmakers": 9,
-      "home": -5,
+      "home": -5.5,
       "source": "Consensus (9 books)"
     },
     "Seattle Seahawks @ Arizona Cardinals": {
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-20T03:26:42.257912+00:00"
+  "updated": "2026-09-20T06:30:37.113194+00:00"
 }
