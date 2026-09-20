@@ -133,9 +133,9 @@
       "source": "Consensus (9 books)"
     },
     "Philadelphia Eagles @ Chicago Bears": {
-      "away": 1.5,
+      "away": 2,
       "bookmakers": 7,
-      "home": -1.5,
+      "home": -2,
       "source": "Consensus (7 books)"
     },
     "Philadelphia Eagles @ Tennessee Titans": {
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-20T00:33:54.537843+00:00"
+  "updated": "2026-09-20T03:26:42.257912+00:00"
 }
