@@ -31,16 +31,16 @@
       "source": "Consensus (8 books)"
     },
     "Houston Texans @ Indianapolis Colts": {
-      "away": -2.5,
-      "bookmakers": 5,
-      "home": 2.5,
-      "source": "Consensus (5 books)"
+      "away": -3,
+      "bookmakers": 9,
+      "home": 3,
+      "source": "Consensus (9 books)"
     },
     "Kansas City Chiefs @ Miami Dolphins": {
-      "away": -10.5,
-      "bookmakers": 8,
-      "home": 10.5,
-      "source": "Consensus (8 books)"
+      "away": -11.5,
+      "bookmakers": 9,
+      "home": 11.5,
+      "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ New Orleans Saints": {
       "away": 3,
@@ -103,5 +103,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-21T12:30:02.635167+00:00"
+  "updated": "2026-09-21T15:25:07.249523+00:00"
 }
