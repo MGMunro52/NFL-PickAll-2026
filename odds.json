@@ -56,15 +56,15 @@
     },
     "Detroit Lions @ Carolina Panthers": {
       "away": -2.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 2.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Green Bay Packers @ Tampa Bay Buccaneers": {
       "away": -1.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 1.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Houston Texans @ Indianapolis Colts": {
       "away": -3,
@@ -103,9 +103,9 @@
       "source": "Consensus (9 books)"
     },
     "Los Angeles Chargers @ Buffalo Bills": {
-      "away": 7,
+      "away": 7.5,
       "bookmakers": 9,
-      "home": -7,
+      "home": -7.5,
       "source": "Consensus (9 books)"
     },
     "Los Angeles Chargers @ Seattle Seahawks": {
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-23T09:27:01.137547+00:00"
+  "updated": "2026-09-23T12:32:08.354529+00:00"
 }
