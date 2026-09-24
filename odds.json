@@ -31,9 +31,9 @@
       "source": "Consensus (9 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
-      "away": -3,
+      "away": -2.5,
       "bookmakers": 9,
-      "home": 3,
+      "home": 2.5,
       "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Pittsburgh Steelers": {
@@ -67,9 +67,9 @@
       "source": "Consensus (8 books)"
     },
     "Houston Texans @ Indianapolis Colts": {
-      "away": -2,
+      "away": -1.5,
       "bookmakers": 9,
-      "home": 2,
+      "home": 1.5,
       "source": "Consensus (9 books)"
     },
     "Indianapolis Colts @ Washington Commanders": {
@@ -98,9 +98,9 @@
     },
     "Las Vegas Raiders @ New Orleans Saints": {
       "away": 3,
-      "bookmakers": 9,
+      "bookmakers": 8,
       "home": -3,
-      "source": "Consensus (9 books)"
+      "source": "Consensus (8 books)"
     },
     "Los Angeles Chargers @ Buffalo Bills": {
       "away": 7.5,
@@ -134,9 +134,9 @@
     },
     "Minnesota Vikings @ Tampa Bay Buccaneers": {
       "away": -1.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 1.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "New England Patriots @ Buffalo Bills": {
       "away": 5.5,
@@ -175,9 +175,9 @@
       "source": "Consensus (8 books)"
     },
     "Seattle Seahawks @ Washington Commanders": {
-      "away": -7,
+      "away": -7.5,
       "bookmakers": 9,
-      "home": 7,
+      "home": 7.5,
       "source": "Consensus (9 books)"
     },
     "Tennessee Titans @ Baltimore Ravens": {
@@ -187,11 +187,11 @@
       "source": "Consensus (7 books)"
     },
     "Tennessee Titans @ New York Giants": {
-      "away": 3,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-24T15:28:24.887640+00:00"
+  "updated": "2026-09-24T18:30:26.171012+00:00"
 }
