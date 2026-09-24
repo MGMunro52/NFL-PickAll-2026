@@ -13,9 +13,9 @@
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ Green Bay Packers": {
-      "away": 5,
+      "away": 4.5,
       "bookmakers": 9,
-      "home": -5,
+      "home": -4.5,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ New Orleans Saints": {
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-24T03:27:08.787457+00:00"
+  "updated": "2026-09-24T06:32:50.822919+00:00"
 }
