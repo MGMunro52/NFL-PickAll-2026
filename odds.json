@@ -91,9 +91,9 @@
       "source": "Consensus (6 books)"
     },
     "Kansas City Chiefs @ Miami Dolphins": {
-      "away": -11.5,
+      "away": -11,
       "bookmakers": 9,
-      "home": 11.5,
+      "home": 11,
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ New Orleans Saints": {
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-24T00:33:51.632551+00:00"
+  "updated": "2026-09-24T03:27:08.787457+00:00"
 }
