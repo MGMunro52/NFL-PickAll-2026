@@ -98,9 +98,9 @@
     },
     "Las Vegas Raiders @ New Orleans Saints": {
       "away": 3,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": -3,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Los Angeles Chargers @ Buffalo Bills": {
       "away": 7.5,
@@ -170,9 +170,9 @@
     },
     "Pittsburgh Steelers @ Cleveland Browns": {
       "away": -2.5,
-      "bookmakers": 8,
+      "bookmakers": 7,
       "home": 2.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (7 books)"
     },
     "Seattle Seahawks @ Washington Commanders": {
       "away": -7.5,
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-24T18:30:26.171012+00:00"
+  "updated": "2026-09-24T21:25:41.446571+00:00"
 }
