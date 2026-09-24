@@ -169,10 +169,10 @@
       "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ Cleveland Browns": {
-      "away": -3,
-      "bookmakers": 7,
-      "home": 3,
-      "source": "Consensus (7 books)"
+      "away": -2.5,
+      "bookmakers": 8,
+      "home": 2.5,
+      "source": "Consensus (8 books)"
     },
     "Seattle Seahawks @ Washington Commanders": {
       "away": -7,
@@ -193,5 +193,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-23T21:26:02.203248+00:00"
+  "updated": "2026-09-24T00:33:51.632551+00:00"
 }
