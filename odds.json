@@ -73,9 +73,9 @@
       "source": "Consensus (7 books)"
     },
     "Kansas City Chiefs @ Miami Dolphins": {
-      "away": -11,
+      "away": -10.5,
       "bookmakers": 9,
-      "home": 11,
+      "home": 10.5,
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ New Orleans Saints": {
@@ -133,9 +133,9 @@
       "source": "Consensus (9 books)"
     },
     "New York Jets @ Chicago Bears": {
-      "away": 3.5,
+      "away": 3,
       "bookmakers": 7,
-      "home": -3.5,
+      "home": -3,
       "source": "Consensus (7 books)"
     },
     "New York Jets @ Detroit Lions": {
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-25T12:32:41.849735+00:00"
+  "updated": "2026-09-25T15:27:59.533350+00:00"
 }
