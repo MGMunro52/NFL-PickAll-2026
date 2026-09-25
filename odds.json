@@ -13,10 +13,10 @@
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ Green Bay Packers": {
-      "away": 6.5,
-      "bookmakers": 6,
-      "home": -6.5,
-      "source": "Consensus (6 books)"
+      "away": -17.5,
+      "bookmakers": 4,
+      "home": 17.5,
+      "source": "Consensus (4 books)"
     },
     "Baltimore Ravens @ Dallas Cowboys": {
       "away": -3.5,
@@ -181,5 +181,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-25T00:34:49.564964+00:00"
+  "updated": "2026-09-25T03:26:18.620724+00:00"
 }
