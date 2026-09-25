@@ -37,9 +37,9 @@
       "source": "Consensus (7 books)"
     },
     "Denver Broncos @ San Francisco 49ers": {
-      "away": 3.5,
+      "away": 3,
       "bookmakers": 7,
-      "home": -3.5,
+      "home": -3,
       "source": "Consensus (7 books)"
     },
     "Detroit Lions @ Carolina Panthers": {
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-25T15:27:59.533350+00:00"
+  "updated": "2026-09-25T18:28:44.907145+00:00"
 }
