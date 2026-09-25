@@ -97,9 +97,9 @@
       "source": "Consensus (7 books)"
     },
     "Los Angeles Rams @ Denver Broncos": {
-      "away": -2.5,
+      "away": -2,
       "bookmakers": 9,
-      "home": 2.5,
+      "home": 2,
       "source": "Consensus (9 books)"
     },
     "Los Angeles Rams @ Philadelphia Eagles": {
@@ -145,9 +145,9 @@
       "source": "Consensus (9 books)"
     },
     "Philadelphia Eagles @ Chicago Bears": {
-      "away": -4.5,
+      "away": -5,
       "bookmakers": 9,
-      "home": 4.5,
+      "home": 5,
       "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ Cleveland Browns": {
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-25T18:28:44.907145+00:00"
+  "updated": "2026-09-25T21:26:23.133884+00:00"
 }
