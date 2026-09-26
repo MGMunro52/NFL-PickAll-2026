@@ -157,9 +157,9 @@
       "source": "Consensus (7 books)"
     },
     "Seattle Seahawks @ Washington Commanders": {
-      "away": -7.5,
+      "away": -8,
       "bookmakers": 9,
-      "home": 7.5,
+      "home": 8,
       "source": "Consensus (9 books)"
     },
     "Tennessee Titans @ Baltimore Ravens": {
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-26T00:32:49.242940+00:00"
+  "updated": "2026-09-26T03:26:30.615344+00:00"
 }
