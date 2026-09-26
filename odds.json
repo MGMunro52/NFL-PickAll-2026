@@ -44,9 +44,9 @@
     },
     "Detroit Lions @ Carolina Panthers": {
       "away": -2.5,
-      "bookmakers": 8,
+      "bookmakers": 7,
       "home": 2.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (7 books)"
     },
     "Houston Texans @ Indianapolis Colts": {
       "away": -1.5,
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-26T18:29:14.832574+00:00"
+  "updated": "2026-09-26T21:26:11.746320+00:00"
 }
