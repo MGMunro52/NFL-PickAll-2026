@@ -7,9 +7,9 @@
       "source": "Consensus (5 books)"
     },
     "Arizona Cardinals @ San Francisco 49ers": {
-      "away": 8.5,
+      "away": 7.5,
       "bookmakers": 9,
-      "home": -8.5,
+      "home": -7.5,
       "source": "Consensus (9 books)"
     },
     "Baltimore Ravens @ Dallas Cowboys": {
@@ -19,9 +19,9 @@
       "source": "Consensus (9 books)"
     },
     "Carolina Panthers @ Cleveland Browns": {
-      "away": -2.5,
+      "away": -2,
       "bookmakers": 9,
-      "home": 2.5,
+      "home": 2,
       "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Pittsburgh Steelers": {
@@ -146,9 +146,9 @@
     },
     "Philadelphia Eagles @ Chicago Bears": {
       "away": -3.5,
-      "bookmakers": 7,
+      "bookmakers": 8,
       "home": 3.5,
-      "source": "Consensus (7 books)"
+      "source": "Consensus (8 books)"
     },
     "Pittsburgh Steelers @ Cleveland Browns": {
       "away": -2.5,
@@ -175,5 +175,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-26T21:26:11.746320+00:00"
+  "updated": "2026-09-27T00:34:51.632276+00:00"
 }
