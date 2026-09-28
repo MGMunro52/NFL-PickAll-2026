@@ -7,9 +7,9 @@
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ New Orleans Saints": {
-      "away": 3,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     },
     "Dallas Cowboys @ Houston Texans": {
@@ -20,14 +20,14 @@
     },
     "Denver Broncos @ San Francisco 49ers": {
       "away": 2.75,
-      "bookmakers": 6,
+      "bookmakers": 8,
       "home": -2.75,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (8 books)"
     },
     "Detroit Lions @ Carolina Panthers": {
-      "away": -3,
+      "away": -3.5,
       "bookmakers": 9,
-      "home": 3,
+      "home": 3.5,
       "source": "Consensus (9 books)"
     },
     "Green Bay Packers @ Tampa Bay Buccaneers": {
@@ -37,9 +37,9 @@
       "source": "Consensus (8 books)"
     },
     "Indianapolis Colts @ Washington Commanders": {
-      "away": -3,
+      "away": -3.5,
       "bookmakers": 9,
-      "home": 3,
+      "home": 3.5,
       "source": "Consensus (9 books)"
     },
     "Jacksonville Jaguars @ Cincinnati Bengals": {
@@ -55,21 +55,21 @@
       "source": "Consensus (8 books)"
     },
     "Los Angeles Chargers @ Seattle Seahawks": {
-      "away": 6.5,
+      "away": 7,
       "bookmakers": 9,
-      "home": -6.5,
+      "home": -7,
       "source": "Consensus (9 books)"
     },
     "Los Angeles Rams @ Philadelphia Eagles": {
-      "away": -2,
-      "bookmakers": 6,
-      "home": 2,
-      "source": "Consensus (6 books)"
+      "away": -2.25,
+      "bookmakers": 4,
+      "home": 2.25,
+      "source": "Consensus (4 books)"
     },
     "Miami Dolphins @ Minnesota Vikings": {
-      "away": 9.75,
+      "away": 10,
       "bookmakers": 8,
-      "home": -9.75,
+      "home": -10,
       "source": "Consensus (8 books)"
     },
     "New England Patriots @ Buffalo Bills": {
@@ -103,5 +103,5 @@
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-09-28T15:31:16.369443+00:00"
+  "updated": "2026-09-28T18:32:15.332480+00:00"
 }
