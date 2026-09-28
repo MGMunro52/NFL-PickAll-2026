@@ -1,22 +1,28 @@
 {
   "games": {
     "Arizona Cardinals @ New York Giants": {
-      "away": 1,
+      "away": 0,
       "bookmakers": 9,
-      "home": -1,
+      "home": 0,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ New Orleans Saints": {
-      "away": 2.5,
+      "away": 3,
       "bookmakers": 9,
-      "home": -2.5,
+      "home": -3,
       "source": "Consensus (9 books)"
     },
     "Dallas Cowboys @ Houston Texans": {
-      "away": 2.25,
+      "away": 2.5,
       "bookmakers": 8,
-      "home": -2.25,
+      "home": -2.5,
       "source": "Consensus (8 books)"
+    },
+    "Denver Broncos @ San Francisco 49ers": {
+      "away": 3,
+      "bookmakers": 4,
+      "home": -3,
+      "source": "Consensus (4 books)"
     },
     "Detroit Lions @ Carolina Panthers": {
       "away": -3,
@@ -26,9 +32,9 @@
     },
     "Green Bay Packers @ Tampa Bay Buccaneers": {
       "away": -3.5,
-      "bookmakers": 7,
+      "bookmakers": 8,
       "home": 3.5,
-      "source": "Consensus (7 books)"
+      "source": "Consensus (8 books)"
     },
     "Indianapolis Colts @ Washington Commanders": {
       "away": -3,
@@ -37,9 +43,9 @@
       "source": "Consensus (9 books)"
     },
     "Jacksonville Jaguars @ Cincinnati Bengals": {
-      "away": 2,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -2,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     },
     "Kansas City Chiefs @ Las Vegas Raiders": {
@@ -54,11 +60,11 @@
       "home": -6.5,
       "source": "Consensus (9 books)"
     },
-    "Los Angeles Rams @ Denver Broncos": {
-      "away": 3.5,
-      "bookmakers": 3,
-      "home": -3.5,
-      "source": "Consensus (3 books)"
+    "Los Angeles Rams @ Philadelphia Eagles": {
+      "away": -2.5,
+      "bookmakers": 4,
+      "home": 2.5,
+      "source": "Consensus (4 books)"
     },
     "Miami Dolphins @ Minnesota Vikings": {
       "away": 10,
@@ -79,9 +85,9 @@
       "source": "Consensus (5 books)"
     },
     "Philadelphia Eagles @ Chicago Bears": {
-      "away": -4,
+      "away": -3.5,
       "bookmakers": 9,
-      "home": 4,
+      "home": 3.5,
       "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ Cleveland Browns": {
@@ -91,11 +97,11 @@
       "source": "Consensus (9 books)"
     },
     "Tennessee Titans @ Baltimore Ravens": {
-      "away": 11.25,
+      "away": 11.5,
       "bookmakers": 8,
-      "home": -11.25,
+      "home": -11.5,
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-09-28T03:29:24.557214+00:00"
+  "updated": "2026-09-28T06:36:43.984400+00:00"
 }
