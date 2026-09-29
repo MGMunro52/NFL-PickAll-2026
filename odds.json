@@ -61,10 +61,10 @@
       "source": "Consensus (9 books)"
     },
     "Los Angeles Rams @ Philadelphia Eagles": {
-      "away": -2.5,
-      "bookmakers": 3,
-      "home": 2.5,
-      "source": "Consensus (3 books)"
+      "away": -3,
+      "bookmakers": 7,
+      "home": 3,
+      "source": "Consensus (7 books)"
     },
     "Miami Dolphins @ Minnesota Vikings": {
       "away": 11,
@@ -79,10 +79,10 @@
       "source": "Consensus (9 books)"
     },
     "New York Jets @ Chicago Bears": {
-      "away": 3.5,
-      "bookmakers": 4,
-      "home": -3.5,
-      "source": "Consensus (4 books)"
+      "away": 3.25,
+      "bookmakers": 8,
+      "home": -3.25,
+      "source": "Consensus (8 books)"
     },
     "Pittsburgh Steelers @ Cleveland Browns": {
       "away": -2.5,
@@ -97,5 +97,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-29T09:30:38.676379+00:00"
+  "updated": "2026-09-29T12:35:37.195553+00:00"
 }
