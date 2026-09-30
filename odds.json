@@ -31,9 +31,9 @@
       "source": "Consensus (6 books)"
     },
     "Cincinnati Bengals @ Miami Dolphins": {
-      "away": -9,
+      "away": -8.75,
       "bookmakers": 6,
-      "home": 9,
+      "home": 8.75,
       "source": "Consensus (6 books)"
     },
     "Cleveland Browns @ New York Jets": {
@@ -187,5 +187,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-30T06:34:57.707995+00:00"
+  "updated": "2026-09-30T09:30:29.525901+00:00"
 }
