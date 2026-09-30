@@ -43,9 +43,9 @@
       "source": "Consensus (6 books)"
     },
     "Dallas Cowboys @ Houston Texans": {
-      "away": 2.5,
+      "away": 3,
       "bookmakers": 9,
-      "home": -2.5,
+      "home": -3,
       "source": "Consensus (9 books)"
     },
     "Denver Broncos @ Los Angeles Chargers": {
@@ -73,9 +73,9 @@
       "source": "Consensus (9 books)"
     },
     "Green Bay Packers @ Tampa Bay Buccaneers": {
-      "away": -4,
+      "away": -3.5,
       "bookmakers": 9,
-      "home": 4,
+      "home": 3.5,
       "source": "Consensus (9 books)"
     },
     "Houston Texans @ Tennessee Titans": {
@@ -187,5 +187,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-30T15:32:38.462928+00:00"
+  "updated": "2026-09-30T18:31:34.136956+00:00"
 }
