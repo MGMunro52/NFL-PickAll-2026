@@ -151,9 +151,9 @@
       "source": "Consensus (6 books)"
     },
     "New York Jets @ Chicago Bears": {
-      "away": 3,
+      "away": 3.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -3.5,
       "source": "Consensus (9 books)"
     },
     "Philadelphia Eagles @ Jacksonville Jaguars": {
@@ -187,5 +187,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-30T09:30:29.525901+00:00"
+  "updated": "2026-09-30T12:38:41.238015+00:00"
 }
