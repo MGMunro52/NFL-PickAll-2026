@@ -55,9 +55,9 @@
       "source": "Consensus (6 books)"
     },
     "Denver Broncos @ San Francisco 49ers": {
-      "away": 3,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     },
     "Detroit Lions @ Arizona Cardinals": {
@@ -85,9 +85,9 @@
       "source": "Consensus (6 books)"
     },
     "Indianapolis Colts @ Pittsburgh Steelers": {
-      "away": 1.75,
+      "away": 2.5,
       "bookmakers": 6,
-      "home": -1.75,
+      "home": -2.5,
       "source": "Consensus (6 books)"
     },
     "Indianapolis Colts @ Washington Commanders": {
@@ -145,9 +145,9 @@
       "source": "Consensus (9 books)"
     },
     "New York Giants @ Washington Commanders": {
-      "away": 2.75,
+      "away": 2.5,
       "bookmakers": 6,
-      "home": -2.75,
+      "home": -2.5,
       "source": "Consensus (6 books)"
     },
     "New York Jets @ Chicago Bears": {
@@ -187,5 +187,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-30T00:37:11.989494+00:00"
+  "updated": "2026-09-30T03:29:27.003998+00:00"
 }
