@@ -1,9 +1,9 @@
 {
   "games": {
     "Arizona Cardinals @ New York Giants": {
-      "away": -2,
+      "away": -2.5,
       "bookmakers": 9,
-      "home": 2,
+      "home": 2.5,
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ New Orleans Saints": {
@@ -103,9 +103,9 @@
       "source": "Consensus (9 books)"
     },
     "Kansas City Chiefs @ Las Vegas Raiders": {
-      "away": -4.25,
+      "away": -4.5,
       "bookmakers": 8,
-      "home": 4.25,
+      "home": 4.5,
       "source": "Consensus (8 books)"
     },
     "Las Vegas Raiders @ New England Patriots": {
@@ -176,9 +176,9 @@
     },
     "Tampa Bay Buccaneers @ Dallas Cowboys": {
       "away": 9.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -9.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Tennessee Titans @ Baltimore Ravens": {
       "away": 11.5,
@@ -187,5 +187,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-09-30T18:31:34.136956+00:00"
+  "updated": "2026-10-01T00:33:12.941074+00:00"
 }
