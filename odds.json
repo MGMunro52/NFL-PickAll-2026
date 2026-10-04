@@ -7,16 +7,16 @@
       "source": "Consensus (9 books)"
     },
     "Atlanta Falcons @ New Orleans Saints": {
-      "away": 2,
+      "away": 1.5,
       "bookmakers": 9,
-      "home": -2,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     },
     "Baltimore Ravens @ Atlanta Falcons": {
-      "away": -6.25,
-      "bookmakers": 6,
-      "home": 6.25,
-      "source": "Consensus (6 books)"
+      "away": -6,
+      "bookmakers": 7,
+      "home": 6,
+      "source": "Consensus (7 books)"
     },
     "Buffalo Bills @ Los Angeles Rams": {
       "away": 2.5,
@@ -169,5 +169,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-03T23:47:08.367458+00:00"
+  "updated": "2026-10-04T05:53:19.639271+00:00"
 }
