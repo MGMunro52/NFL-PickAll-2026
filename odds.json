@@ -1,10 +1,10 @@
 {
   "games": {
     "Baltimore Ravens @ Atlanta Falcons": {
-      "away": -2.5,
-      "bookmakers": 5,
-      "home": 2.5,
-      "source": "Consensus (5 books)"
+      "away": 3,
+      "bookmakers": 9,
+      "home": -3,
+      "source": "Consensus (9 books)"
     },
     "Buffalo Bills @ Los Angeles Rams": {
       "away": 3,
@@ -62,9 +62,9 @@
     },
     "Minnesota Vikings @ New Orleans Saints": {
       "away": -1.5,
-      "bookmakers": 6,
+      "bookmakers": 9,
       "home": 1.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (9 books)"
     },
     "New York Giants @ Washington Commanders": {
       "away": 3.5,
@@ -85,11 +85,11 @@
       "source": "Consensus (9 books)"
     },
     "Tampa Bay Buccaneers @ Dallas Cowboys": {
-      "away": 8.5,
+      "away": 8,
       "bookmakers": 9,
-      "home": -8.5,
+      "home": -8,
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-06T06:20:55.767737+00:00"
+  "updated": "2026-10-06T15:57:06.564123+00:00"
 }
