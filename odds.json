@@ -7,9 +7,9 @@
       "source": "Consensus (7 books)"
     },
     "Baltimore Ravens @ Atlanta Falcons": {
-      "away": 3,
+      "away": 3.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -3.5,
       "source": "Consensus (9 books)"
     },
     "Baltimore Ravens @ Cleveland Browns": {
@@ -55,9 +55,9 @@
       "source": "Consensus (9 books)"
     },
     "Cleveland Browns @ New York Jets": {
-      "away": 2,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -2,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     },
     "Denver Broncos @ Los Angeles Chargers": {
@@ -139,9 +139,9 @@
       "source": "Consensus (9 books)"
     },
     "Seattle Seahawks @ Denver Broncos": {
-      "away": -1.5,
+      "away": -2,
       "bookmakers": 7,
-      "home": 1.5,
+      "home": 2,
       "source": "Consensus (7 books)"
     },
     "Tennessee Titans @ Indianapolis Colts": {
@@ -157,5 +157,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-10-09T10:33:35.836720+00:00"
+  "updated": "2026-10-09T18:21:11.043220+00:00"
 }
