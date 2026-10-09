@@ -144,12 +144,6 @@
       "home": 1.5,
       "source": "Consensus (7 books)"
     },
-    "Tampa Bay Buccaneers @ Dallas Cowboys": {
-      "away": 3.5,
-      "bookmakers": 6,
-      "home": -3.5,
-      "source": "Consensus (6 books)"
-    },
     "Tennessee Titans @ Indianapolis Colts": {
       "away": 6.5,
       "bookmakers": 7,
@@ -163,5 +157,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-10-09T01:13:21.585268+00:00"
+  "updated": "2026-10-09T10:33:35.836720+00:00"
 }
