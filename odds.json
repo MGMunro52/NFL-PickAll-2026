@@ -103,9 +103,9 @@
       "source": "Consensus (7 books)"
     },
     "Minnesota Vikings @ New Orleans Saints": {
-      "away": -2.5,
+      "away": -2,
       "bookmakers": 9,
-      "home": 2.5,
+      "home": 2,
       "source": "Consensus (9 books)"
     },
     "New Orleans Saints @ New York Giants": {
@@ -127,9 +127,9 @@
       "source": "Consensus (7 books)"
     },
     "Philadelphia Eagles @ Jacksonville Jaguars": {
-      "away": 7.5,
+      "away": 8,
       "bookmakers": 9,
-      "home": -7.5,
+      "home": -8,
       "source": "Consensus (9 books)"
     },
     "San Francisco 49ers @ Seattle Seahawks": {
@@ -157,5 +157,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-10-10T21:43:59.943939+00:00"
+  "updated": "2026-10-11T05:46:47.200627+00:00"
 }
