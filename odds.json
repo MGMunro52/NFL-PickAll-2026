@@ -1,28 +1,16 @@
 {
   "games": {
-    "Arizona Cardinals @ Los Angeles Rams": {
-      "away": 12.5,
-      "bookmakers": 8,
-      "home": -12.5,
-      "source": "Consensus (8 books)"
-    },
     "Baltimore Ravens @ Cleveland Browns": {
       "away": -4.5,
       "bookmakers": 8,
       "home": 4.5,
       "source": "Consensus (8 books)"
     },
-    "Buffalo Bills @ Las Vegas Raiders": {
-      "away": -6,
-      "bookmakers": 8,
-      "home": 6,
-      "source": "Consensus (8 books)"
-    },
     "Buffalo Bills @ Los Angeles Rams": {
-      "away": 3.5,
-      "bookmakers": 9,
-      "home": -3.5,
-      "source": "Consensus (9 books)"
+      "away": 1.5,
+      "bookmakers": 6,
+      "home": -1.5,
+      "source": "Consensus (6 books)"
     },
     "Carolina Panthers @ Philadelphia Eagles": {
       "away": 1,
@@ -55,9 +43,9 @@
       "source": "Consensus (9 books)"
     },
     "New Orleans Saints @ New York Giants": {
-      "away": -1.5,
+      "away": -0.5,
       "bookmakers": 9,
-      "home": 1.5,
+      "home": 0.5,
       "source": "Consensus (9 books)"
     },
     "New York Jets @ New England Patriots": {
@@ -91,5 +79,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-12T21:16:09.372499+00:00"
+  "updated": "2026-10-13T02:36:09.461690+00:00"
 }
