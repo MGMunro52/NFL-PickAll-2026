@@ -13,9 +13,9 @@
       "source": "Consensus (9 books)"
     },
     "Buffalo Bills @ Las Vegas Raiders": {
-      "away": -5,
+      "away": -4.5,
       "bookmakers": 9,
-      "home": 5,
+      "home": 4.5,
       "source": "Consensus (9 books)"
     },
     "Carolina Panthers @ Philadelphia Eagles": {
@@ -37,9 +37,9 @@
       "source": "Consensus (6 books)"
     },
     "Cleveland Browns @ Tennessee Titans": {
-      "away": -1.5,
+      "away": -2,
       "bookmakers": 6,
-      "home": 1.5,
+      "home": 2,
       "source": "Consensus (6 books)"
     },
     "Dallas Cowboys @ Green Bay Packers": {
@@ -169,5 +169,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-14T00:18:08.927589+00:00"
+  "updated": "2026-10-14T08:43:11.747718+00:00"
 }
