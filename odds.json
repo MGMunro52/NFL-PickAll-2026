@@ -91,9 +91,9 @@
       "source": "Consensus (7 books)"
     },
     "New Orleans Saints @ New York Giants": {
-      "away": -1,
+      "away": 0,
       "bookmakers": 9,
-      "home": 1,
+      "home": 0,
       "source": "Consensus (9 books)"
     },
     "New York Giants @ Houston Texans": {
@@ -145,5 +145,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-16T04:31:50.060305+00:00"
+  "updated": "2026-10-16T11:24:32.436150+00:00"
 }
