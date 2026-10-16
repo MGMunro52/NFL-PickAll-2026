@@ -7,9 +7,9 @@
       "source": "Consensus (9 books)"
     },
     "Baltimore Ravens @ Cleveland Browns": {
-      "away": -4,
+      "away": -3.5,
       "bookmakers": 9,
-      "home": 4,
+      "home": 3.5,
       "source": "Consensus (9 books)"
     },
     "Buffalo Bills @ Las Vegas Raiders": {
@@ -145,5 +145,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-16T11:24:32.436150+00:00"
+  "updated": "2026-10-16T16:39:34.272147+00:00"
 }
