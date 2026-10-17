@@ -26,9 +26,9 @@
     },
     "Chicago Bears @ Atlanta Falcons": {
       "away": -1,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 1,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Baltimore Ravens": {
       "away": 3.5,
@@ -91,9 +91,9 @@
       "source": "Consensus (7 books)"
     },
     "New Orleans Saints @ New York Giants": {
-      "away": 0,
+      "away": -1,
       "bookmakers": 9,
-      "home": 0,
+      "home": 1,
       "source": "Consensus (9 books)"
     },
     "New York Giants @ Houston Texans": {
@@ -145,5 +145,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-17T15:34:33.470469+00:00"
+  "updated": "2026-10-17T20:36:43.139573+00:00"
 }
