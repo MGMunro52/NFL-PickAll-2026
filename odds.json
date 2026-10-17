@@ -19,16 +19,16 @@
       "source": "Consensus (9 books)"
     },
     "Carolina Panthers @ Philadelphia Eagles": {
-      "away": -3.5,
+      "away": -3,
       "bookmakers": 9,
-      "home": 3.5,
+      "home": 3,
       "source": "Consensus (9 books)"
     },
     "Chicago Bears @ Atlanta Falcons": {
       "away": -1,
-      "bookmakers": 9,
+      "bookmakers": 8,
       "home": 1,
-      "source": "Consensus (9 books)"
+      "source": "Consensus (8 books)"
     },
     "Cincinnati Bengals @ Baltimore Ravens": {
       "away": 3.5,
@@ -145,5 +145,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-17T10:44:06.618734+00:00"
+  "updated": "2026-10-17T15:34:33.470469+00:00"
 }
