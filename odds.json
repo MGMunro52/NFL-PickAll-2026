@@ -37,9 +37,9 @@
       "source": "Consensus (9 books)"
     },
     "Cleveland Browns @ Pittsburgh Steelers": {
-      "away": 4.25,
+      "away": 4,
       "bookmakers": 6,
-      "home": -4.25,
+      "home": -4,
       "source": "Consensus (6 books)"
     },
     "Cleveland Browns @ Tennessee Titans": {
@@ -85,9 +85,9 @@
       "source": "Consensus (6 books)"
     },
     "Kansas City Chiefs @ Seattle Seahawks": {
-      "away": 2.5,
+      "away": 3,
       "bookmakers": 9,
-      "home": -2.5,
+      "home": -3,
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ New York Jets": {
@@ -169,5 +169,5 @@
       "source": "Consensus (6 books)"
     }
   },
-  "updated": "2026-10-21T04:47:00.329153+00:00"
+  "updated": "2026-10-21T11:48:59.421626+00:00"
 }
