@@ -7,9 +7,9 @@
       "source": "Consensus (6 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
-      "away": 0,
+      "away": 0.5,
       "bookmakers": 6,
-      "home": 0,
+      "home": -0.5,
       "source": "Consensus (6 books)"
     },
     "Baltimore Ravens @ Buffalo Bills": {
@@ -85,9 +85,9 @@
       "source": "Consensus (6 books)"
     },
     "Kansas City Chiefs @ Seattle Seahawks": {
-      "away": 3,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ New York Jets": {
@@ -169,5 +169,5 @@
       "source": "Consensus (6 books)"
     }
   },
-  "updated": "2026-10-20T23:52:45.127018+00:00"
+  "updated": "2026-10-21T04:47:00.329153+00:00"
 }
