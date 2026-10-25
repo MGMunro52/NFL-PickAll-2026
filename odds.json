@@ -31,9 +31,9 @@
       "source": "Consensus (6 books)"
     },
     "Cincinnati Bengals @ Baltimore Ravens": {
-      "away": -2.75,
+      "away": -3,
       "bookmakers": 8,
-      "home": 2.75,
+      "home": 3,
       "source": "Consensus (8 books)"
     },
     "Cleveland Browns @ Pittsburgh Steelers": {
@@ -163,5 +163,5 @@
       "source": "Consensus (6 books)"
     }
   },
-  "updated": "2026-10-24T23:14:24.191828+00:00"
+  "updated": "2026-10-25T04:41:11.262402+00:00"
 }
