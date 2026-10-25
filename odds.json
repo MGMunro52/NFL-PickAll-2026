@@ -1,5 +1,29 @@
 {
   "games": {
+    "Atlanta Falcons @ Tampa Bay Buccaneers": {
+      "away": 1.5,
+      "bookmakers": 6,
+      "home": -1.5,
+      "source": "Consensus (6 books)"
+    },
+    "Baltimore Ravens @ Buffalo Bills": {
+      "away": 3.5,
+      "bookmakers": 6,
+      "home": -3.5,
+      "source": "Consensus (6 books)"
+    },
+    "Chicago Bears @ Seattle Seahawks": {
+      "away": 3,
+      "bookmakers": 6,
+      "home": -3,
+      "source": "Consensus (6 books)"
+    },
+    "Cleveland Browns @ Pittsburgh Steelers": {
+      "away": 3.5,
+      "bookmakers": 6,
+      "home": -3.5,
+      "source": "Consensus (6 books)"
+    },
     "Dallas Cowboys @ Philadelphia Eagles": {
       "away": -4.5,
       "bookmakers": 9,
@@ -7,15 +31,21 @@
       "source": "Consensus (9 books)"
     },
     "Denver Broncos @ Arizona Cardinals": {
-      "away": -6,
-      "bookmakers": 4,
-      "home": 6,
-      "source": "Consensus (4 books)"
+      "away": -13.5,
+      "bookmakers": 6,
+      "home": 13.5,
+      "source": "Consensus (6 books)"
     },
     "Green Bay Packers @ Detroit Lions": {
-      "away": 6.75,
+      "away": 3,
       "bookmakers": 6,
-      "home": -6.75,
+      "home": -3,
+      "source": "Consensus (6 books)"
+    },
+    "Indianapolis Colts @ Jacksonville Jaguars": {
+      "away": 7.5,
+      "bookmakers": 6,
+      "home": -7.5,
       "source": "Consensus (6 books)"
     },
     "Kansas City Chiefs @ Seattle Seahawks": {
@@ -25,11 +55,23 @@
       "source": "Consensus (9 books)"
     },
     "Los Angeles Rams @ Las Vegas Raiders": {
+      "away": -16.5,
+      "bookmakers": 6,
+      "home": 16.5,
+      "source": "Consensus (6 books)"
+    },
+    "New England Patriots @ Miami Dolphins": {
       "away": -7.5,
       "bookmakers": 6,
       "home": 7.5,
       "source": "Consensus (6 books)"
+    },
+    "Tennessee Titans @ Cincinnati Bengals": {
+      "away": 10.25,
+      "bookmakers": 6,
+      "home": -10.25,
+      "source": "Consensus (6 books)"
     }
   },
-  "updated": "2026-10-25T20:50:47.649420+00:00"
+  "updated": "2026-10-25T23:16:14.297097+00:00"
 }
