@@ -1,10 +1,10 @@
 {
   "games": {
     "Arizona Cardinals @ Dallas Cowboys": {
-      "away": 6.5,
-      "bookmakers": 8,
-      "home": -6.5,
-      "source": "Consensus (8 books)"
+      "away": 6,
+      "bookmakers": 7,
+      "home": -6,
+      "source": "Consensus (7 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
       "away": 2,
@@ -80,9 +80,9 @@
     },
     "Philadelphia Eagles @ Washington Commanders": {
       "away": 3.5,
-      "bookmakers": 8,
+      "bookmakers": 7,
       "home": -3.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (7 books)"
     },
     "Tennessee Titans @ Cincinnati Bengals": {
       "away": 10,
@@ -91,5 +91,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-26T20:28:54.142150+00:00"
+  "updated": "2026-10-27T00:25:41.694565+00:00"
 }
