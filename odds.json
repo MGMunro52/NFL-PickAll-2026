@@ -60,10 +60,22 @@
       "home": 4.5,
       "source": "Consensus (6 books)"
     },
+    "Denver Broncos @ Carolina Panthers": {
+      "away": -2.5,
+      "bookmakers": 6,
+      "home": 2.5,
+      "source": "Consensus (6 books)"
+    },
     "Detroit Lions @ Miami Dolphins": {
       "away": -7,
       "bookmakers": 6,
       "home": 7,
+      "source": "Consensus (6 books)"
+    },
+    "Green Bay Packers @ New England Patriots": {
+      "away": 2.5,
+      "bookmakers": 6,
+      "home": -2.5,
       "source": "Consensus (6 books)"
     },
     "Houston Texans @ Los Angeles Chargers": {
@@ -91,15 +103,15 @@
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ New York Jets": {
-      "away": 1.5,
+      "away": 1,
       "bookmakers": 9,
-      "home": -1.5,
+      "home": -1,
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ San Francisco 49ers": {
-      "away": 10,
+      "away": 10.5,
       "bookmakers": 6,
-      "home": -10,
+      "home": -10.5,
       "source": "Consensus (6 books)"
     },
     "Los Angeles Chargers @ Los Angeles Rams": {
@@ -157,5 +169,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-30T18:00:05.278199+00:00"
+  "updated": "2026-10-30T22:19:55.809012+00:00"
 }
