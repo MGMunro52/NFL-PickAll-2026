@@ -91,15 +91,15 @@
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ New York Jets": {
-      "away": 1,
+      "away": 1.5,
       "bookmakers": 9,
-      "home": -1,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ San Francisco 49ers": {
-      "away": 9.5,
+      "away": 10,
       "bookmakers": 6,
-      "home": -9.5,
+      "home": -10,
       "source": "Consensus (6 books)"
     },
     "Los Angeles Chargers @ Los Angeles Rams": {
@@ -151,11 +151,11 @@
       "source": "Consensus (6 books)"
     },
     "Tennessee Titans @ Cincinnati Bengals": {
-      "away": 12,
+      "away": 12.5,
       "bookmakers": 9,
-      "home": -12,
+      "home": -12.5,
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-30T10:00:52.024350+00:00"
+  "updated": "2026-10-30T18:00:05.278199+00:00"
 }
