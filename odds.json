@@ -151,9 +151,9 @@
       "source": "Consensus (6 books)"
     },
     "Philadelphia Eagles @ Washington Commanders": {
-      "away": 6,
+      "away": 5.5,
       "bookmakers": 9,
-      "home": -6,
+      "home": -5.5,
       "source": "Consensus (9 books)"
     },
     "Tampa Bay Buccaneers @ Chicago Bears": {
@@ -169,5 +169,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-10-30T22:19:55.809012+00:00"
+  "updated": "2026-10-31T05:40:58.218011+00:00"
 }
