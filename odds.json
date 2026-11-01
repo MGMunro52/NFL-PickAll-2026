@@ -7,15 +7,15 @@
       "source": "Consensus (9 books)"
     },
     "Arizona Cardinals @ Seattle Seahawks": {
-      "away": 11,
+      "away": 11.5,
       "bookmakers": 7,
-      "home": -11,
+      "home": -11.5,
       "source": "Consensus (7 books)"
     },
     "Atlanta Falcons @ Tampa Bay Buccaneers": {
-      "away": 2.5,
+      "away": 1.5,
       "bookmakers": 9,
-      "home": -2.5,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     },
     "Baltimore Ravens @ Buffalo Bills": {
@@ -158,9 +158,9 @@
     },
     "Tampa Bay Buccaneers @ Chicago Bears": {
       "away": 6,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -6,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Tennessee Titans @ Cincinnati Bengals": {
       "away": 12.5,
@@ -169,5 +169,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-11-01T00:07:52.430585+00:00"
+  "updated": "2026-11-01T06:04:15.052843+00:00"
 }
