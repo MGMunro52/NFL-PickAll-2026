@@ -1,9 +1,9 @@
 {
   "games": {
     "Arizona Cardinals @ Seattle Seahawks": {
-      "away": 11.25,
+      "away": 11.5,
       "bookmakers": 8,
-      "home": -11.25,
+      "home": -11.5,
       "source": "Consensus (8 books)"
     },
     "Buffalo Bills @ Minnesota Vikings": {
@@ -25,21 +25,21 @@
       "source": "Consensus (9 books)"
     },
     "Cleveland Browns @ New Orleans Saints": {
-      "away": 3,
+      "away": 2.5,
       "bookmakers": 9,
-      "home": -3,
+      "home": -2.5,
       "source": "Consensus (9 books)"
     },
     "Dallas Cowboys @ Indianapolis Colts": {
-      "away": -5.5,
+      "away": -6,
       "bookmakers": 9,
-      "home": 5.5,
+      "home": 6,
       "source": "Consensus (9 books)"
     },
     "Denver Broncos @ Carolina Panthers": {
-      "away": -2.5,
+      "away": -3,
       "bookmakers": 8,
-      "home": 2.5,
+      "home": 3,
       "source": "Consensus (8 books)"
     },
     "Detroit Lions @ Miami Dolphins": {
@@ -62,9 +62,9 @@
     },
     "Jacksonville Jaguars @ Baltimore Ravens": {
       "away": -8.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 8.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ San Francisco 49ers": {
       "away": 9.5,
@@ -74,20 +74,20 @@
     },
     "Los Angeles Rams @ Washington Commanders": {
       "away": -5.5,
-      "bookmakers": 4,
+      "bookmakers": 8,
       "home": 5.5,
-      "source": "Consensus (4 books)"
+      "source": "Consensus (8 books)"
     },
     "New York Giants @ Philadelphia Eagles": {
       "away": -3,
-      "bookmakers": 4,
+      "bookmakers": 7,
       "home": 3,
-      "source": "Consensus (4 books)"
+      "source": "Consensus (7 books)"
     },
     "New York Jets @ Kansas City Chiefs": {
-      "away": 10,
+      "away": 9.5,
       "bookmakers": 9,
-      "home": -10,
+      "home": -9.5,
       "source": "Consensus (9 books)"
     },
     "Tampa Bay Buccaneers @ Chicago Bears": {
@@ -97,5 +97,5 @@
       "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-11-02T11:06:29.700040+00:00"
+  "updated": "2026-11-02T21:42:18.633635+00:00"
 }
