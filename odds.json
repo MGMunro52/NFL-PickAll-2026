@@ -97,9 +97,9 @@
       "source": "Consensus (9 books)"
     },
     "Los Angeles Chargers @ Baltimore Ravens": {
-      "away": 0,
+      "away": -1,
       "bookmakers": 5,
-      "home": 0,
+      "home": 1,
       "source": "Consensus (5 books)"
     },
     "Los Angeles Rams @ Arizona Cardinals": {
@@ -127,9 +127,9 @@
       "source": "Consensus (5 books)"
     },
     "New England Patriots @ Detroit Lions": {
-      "away": -1,
+      "away": 0.5,
       "bookmakers": 4,
-      "home": 1,
+      "home": -0.5,
       "source": "Consensus (4 books)"
     },
     "New York Giants @ Philadelphia Eagles": {
@@ -175,5 +175,5 @@
       "source": "Consensus (5 books)"
     }
   },
-  "updated": "2026-11-03T23:23:17.394135+00:00"
+  "updated": "2026-11-04T06:21:48.805260+00:00"
 }
