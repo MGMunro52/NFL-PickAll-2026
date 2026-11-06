@@ -72,17 +72,11 @@
       "home": 5.5,
       "source": "Consensus (9 books)"
     },
-    "Jacksonville Jaguars @ Baltimore Ravens": {
-      "away": -9.5,
-      "bookmakers": 9,
-      "home": 9.5,
-      "source": "Consensus (9 books)"
-    },
     "Jacksonville Jaguars @ Tennessee Titans": {
-      "away": -9.5,
-      "bookmakers": 6,
-      "home": 9.5,
-      "source": "Consensus (6 books)"
+      "away": -10,
+      "bookmakers": 3,
+      "home": 10,
+      "source": "Consensus (3 books)"
     },
     "Kansas City Chiefs @ Atlanta Falcons": {
       "away": -3,
@@ -169,5 +163,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-05T23:38:30.553970+00:00"
+  "updated": "2026-11-06T06:46:01.530675+00:00"
 }
