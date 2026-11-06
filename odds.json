@@ -133,9 +133,9 @@
       "source": "Consensus (9 books)"
     },
     "New York Jets @ Kansas City Chiefs": {
-      "away": 10,
+      "away": 9.5,
       "bookmakers": 9,
-      "home": -10,
+      "home": -9.5,
       "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ Cincinnati Bengals": {
@@ -145,9 +145,9 @@
       "source": "Consensus (6 books)"
     },
     "San Francisco 49ers @ Dallas Cowboys": {
-      "away": -4.25,
+      "away": -4.5,
       "bookmakers": 6,
-      "home": 4.25,
+      "home": 4.5,
       "source": "Consensus (6 books)"
     },
     "Tampa Bay Buccaneers @ Chicago Bears": {
@@ -163,5 +163,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-06T06:46:01.530675+00:00"
+  "updated": "2026-11-06T16:45:24.631404+00:00"
 }
