@@ -85,10 +85,10 @@
       "source": "Consensus (6 books)"
     },
     "Las Vegas Raiders @ San Francisco 49ers": {
-      "away": 10,
-      "bookmakers": 9,
-      "home": -10,
-      "source": "Consensus (9 books)"
+      "away": 9.75,
+      "bookmakers": 8,
+      "home": -9.75,
+      "source": "Consensus (8 books)"
     },
     "Los Angeles Chargers @ Baltimore Ravens": {
       "away": 1.5,
@@ -163,5 +163,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-07T05:57:56.976129+00:00"
+  "updated": "2026-11-07T13:00:07.201267+00:00"
 }
