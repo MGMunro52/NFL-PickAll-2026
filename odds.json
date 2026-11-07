@@ -37,9 +37,9 @@
       "source": "Consensus (9 books)"
     },
     "Dallas Cowboys @ Indianapolis Colts": {
-      "away": -5.5,
+      "away": -5,
       "bookmakers": 9,
-      "home": 5.5,
+      "home": 5,
       "source": "Consensus (9 books)"
     },
     "Denver Broncos @ Carolina Panthers": {
@@ -163,5 +163,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-06T23:07:55.088567+00:00"
+  "updated": "2026-11-07T05:57:56.976129+00:00"
 }
