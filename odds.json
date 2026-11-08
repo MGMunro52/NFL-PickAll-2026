@@ -67,9 +67,9 @@
       "source": "Consensus (7 books)"
     },
     "Houston Texans @ Los Angeles Chargers": {
-      "away": -6,
+      "away": -5.5,
       "bookmakers": 9,
-      "home": 6,
+      "home": 5.5,
       "source": "Consensus (9 books)"
     },
     "Jacksonville Jaguars @ Tennessee Titans": {
@@ -140,9 +140,9 @@
     },
     "Pittsburgh Steelers @ Cincinnati Bengals": {
       "away": 3,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -3,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "San Francisco 49ers @ Dallas Cowboys": {
       "away": -4.5,
@@ -163,5 +163,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-08T00:35:38.033286+00:00"
+  "updated": "2026-11-08T10:22:48.173670+00:00"
 }
