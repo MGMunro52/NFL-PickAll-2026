@@ -8,9 +8,9 @@
     },
     "Buffalo Bills @ Minnesota Vikings": {
       "away": -3,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 3,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Buffalo Bills @ New York Jets": {
       "away": -7.5,
@@ -79,15 +79,15 @@
       "source": "Consensus (5 books)"
     },
     "Kansas City Chiefs @ Atlanta Falcons": {
-      "away": -3,
+      "away": -3.5,
       "bookmakers": 7,
-      "home": 3,
+      "home": 3.5,
       "source": "Consensus (7 books)"
     },
     "Las Vegas Raiders @ San Francisco 49ers": {
-      "away": 10,
+      "away": 9.5,
       "bookmakers": 9,
-      "home": -10,
+      "home": -9.5,
       "source": "Consensus (9 books)"
     },
     "Los Angeles Chargers @ Baltimore Ravens": {
@@ -97,10 +97,10 @@
       "source": "Consensus (3 books)"
     },
     "Los Angeles Rams @ Arizona Cardinals": {
-      "away": -7.75,
-      "bookmakers": 6,
-      "home": 7.75,
-      "source": "Consensus (6 books)"
+      "away": -8,
+      "bookmakers": 7,
+      "home": 8,
+      "source": "Consensus (7 books)"
     },
     "Los Angeles Rams @ Washington Commanders": {
       "away": -4.5,
@@ -146,9 +146,9 @@
     },
     "San Francisco 49ers @ Dallas Cowboys": {
       "away": -4.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 4.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Tampa Bay Buccaneers @ Chicago Bears": {
       "away": 6,
@@ -163,5 +163,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-07T19:25:26.079311+00:00"
+  "updated": "2026-11-08T00:35:38.033286+00:00"
 }
