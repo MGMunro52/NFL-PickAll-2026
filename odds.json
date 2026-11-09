@@ -1,41 +1,95 @@
 {
   "games": {
-    "Arizona Cardinals @ Seattle Seahawks": {
-      "away": 7.5,
-      "bookmakers": 6,
-      "home": -7.5,
-      "source": "Consensus (6 books)"
-    },
     "Buffalo Bills @ Minnesota Vikings": {
       "away": -3,
       "bookmakers": 9,
       "home": 3,
       "source": "Consensus (9 books)"
     },
-    "Green Bay Packers @ New England Patriots": {
-      "away": -11.75,
-      "bookmakers": 6,
-      "home": 11.75,
-      "source": "Consensus (6 books)"
+    "Buffalo Bills @ New York Jets": {
+      "away": -7.5,
+      "bookmakers": 7,
+      "home": 7.5,
+      "source": "Consensus (7 books)"
     },
-    "Houston Texans @ Los Angeles Chargers": {
-      "away": -3.5,
-      "bookmakers": 6,
-      "home": 3.5,
-      "source": "Consensus (6 books)"
-    },
-    "Las Vegas Raiders @ San Francisco 49ers": {
-      "away": 14.25,
-      "bookmakers": 6,
-      "home": -14.25,
-      "source": "Consensus (6 books)"
-    },
-    "Tampa Bay Buccaneers @ Chicago Bears": {
-      "away": 6,
+    "Carolina Panthers @ New Orleans Saints": {
+      "away": -1,
       "bookmakers": 9,
-      "home": -6,
+      "home": 1,
+      "source": "Consensus (9 books)"
+    },
+    "Houston Texans @ Cleveland Browns": {
+      "away": -4.5,
+      "bookmakers": 9,
+      "home": 4.5,
+      "source": "Consensus (9 books)"
+    },
+    "Jacksonville Jaguars @ Tennessee Titans": {
+      "away": -9.5,
+      "bookmakers": 9,
+      "home": 9.5,
+      "source": "Consensus (9 books)"
+    },
+    "Kansas City Chiefs @ Atlanta Falcons": {
+      "away": -3,
+      "bookmakers": 9,
+      "home": 3,
+      "source": "Consensus (9 books)"
+    },
+    "Los Angeles Chargers @ Baltimore Ravens": {
+      "away": 4.5,
+      "bookmakers": 8,
+      "home": -4.5,
+      "source": "Consensus (8 books)"
+    },
+    "Los Angeles Rams @ Arizona Cardinals": {
+      "away": -7.5,
+      "bookmakers": 9,
+      "home": 7.5,
+      "source": "Consensus (9 books)"
+    },
+    "Miami Dolphins @ Indianapolis Colts": {
+      "away": 2.5,
+      "bookmakers": 9,
+      "home": -2.5,
+      "source": "Consensus (9 books)"
+    },
+    "Minnesota Vikings @ Green Bay Packers": {
+      "away": 3,
+      "bookmakers": 7,
+      "home": -3,
+      "source": "Consensus (7 books)"
+    },
+    "New England Patriots @ Detroit Lions": {
+      "away": 2.5,
+      "bookmakers": 8,
+      "home": -2.5,
+      "source": "Consensus (8 books)"
+    },
+    "Pittsburgh Steelers @ Cincinnati Bengals": {
+      "away": 3.5,
+      "bookmakers": 9,
+      "home": -3.5,
+      "source": "Consensus (9 books)"
+    },
+    "San Francisco 49ers @ Dallas Cowboys": {
+      "away": -4.5,
+      "bookmakers": 9,
+      "home": 4.5,
+      "source": "Consensus (9 books)"
+    },
+    "Seattle Seahawks @ Las Vegas Raiders": {
+      "away": -3.5,
+      "bookmakers": 8,
+      "home": 3.5,
+      "source": "Consensus (8 books)"
+    },
+    "Washington Commanders @ New York Giants": {
+      "away": 1.5,
+      "bookmakers": 9,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-11-08T22:05:07.083155+00:00"
+  "updated": "2026-11-09T06:28:02.223344+00:00"
 }
