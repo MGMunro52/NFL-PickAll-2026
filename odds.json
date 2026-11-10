@@ -1,9 +1,9 @@
 {
   "games": {
-    "Buffalo Bills @ Minnesota Vikings": {
-      "away": -7.25,
+    "Buffalo Bills @ New York Jets": {
+      "away": -8.25,
       "bookmakers": 6,
-      "home": 7.25,
+      "home": 8.25,
       "source": "Consensus (6 books)"
     },
     "Carolina Panthers @ New Orleans Saints": {
@@ -19,9 +19,9 @@
       "source": "Consensus (9 books)"
     },
     "Jacksonville Jaguars @ Tennessee Titans": {
-      "away": -10,
+      "away": -10.5,
       "bookmakers": 9,
-      "home": 10,
+      "home": 10.5,
       "source": "Consensus (9 books)"
     },
     "Kansas City Chiefs @ Atlanta Falcons": {
@@ -48,11 +48,17 @@
       "home": -2.5,
       "source": "Consensus (9 books)"
     },
+    "Minnesota Vikings @ Green Bay Packers": {
+      "away": 5,
+      "bookmakers": 6,
+      "home": -5,
+      "source": "Consensus (6 books)"
+    },
     "New England Patriots @ Detroit Lions": {
-      "away": 2.75,
-      "bookmakers": 8,
-      "home": -2.75,
-      "source": "Consensus (8 books)"
+      "away": 3,
+      "bookmakers": 9,
+      "home": -3,
+      "source": "Consensus (9 books)"
     },
     "Pittsburgh Steelers @ Cincinnati Bengals": {
       "away": 3.5,
@@ -73,11 +79,11 @@
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ New York Giants": {
-      "away": 2,
-      "bookmakers": 8,
-      "home": -2,
-      "source": "Consensus (8 books)"
+      "away": 2.5,
+      "bookmakers": 9,
+      "home": -2.5,
+      "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-11-10T03:34:14.652718+00:00"
+  "updated": "2026-11-10T14:52:36.583538+00:00"
 }
