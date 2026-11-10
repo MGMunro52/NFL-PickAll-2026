@@ -1,21 +1,15 @@
 {
   "games": {
     "Buffalo Bills @ Minnesota Vikings": {
-      "away": -3.5,
-      "bookmakers": 9,
-      "home": 3.5,
-      "source": "Consensus (9 books)"
-    },
-    "Buffalo Bills @ New York Jets": {
-      "away": -7.5,
-      "bookmakers": 8,
-      "home": 7.5,
-      "source": "Consensus (8 books)"
+      "away": -7.25,
+      "bookmakers": 6,
+      "home": 7.25,
+      "source": "Consensus (6 books)"
     },
     "Carolina Panthers @ New Orleans Saints": {
-      "away": 1.5,
+      "away": 1,
       "bookmakers": 9,
-      "home": -1.5,
+      "home": -1,
       "source": "Consensus (9 books)"
     },
     "Houston Texans @ Cleveland Browns": {
@@ -37,16 +31,16 @@
       "source": "Consensus (9 books)"
     },
     "Los Angeles Chargers @ Baltimore Ravens": {
-      "away": 5.5,
+      "away": 5,
       "bookmakers": 8,
-      "home": -5.5,
+      "home": -5,
       "source": "Consensus (8 books)"
     },
     "Los Angeles Rams @ Arizona Cardinals": {
-      "away": -7.5,
-      "bookmakers": 9,
-      "home": 7.5,
-      "source": "Consensus (9 books)"
+      "away": -9.5,
+      "bookmakers": 8,
+      "home": 9.5,
+      "source": "Consensus (8 books)"
     },
     "Miami Dolphins @ Indianapolis Colts": {
       "away": 2.5,
@@ -54,16 +48,10 @@
       "home": -2.5,
       "source": "Consensus (9 books)"
     },
-    "Minnesota Vikings @ Green Bay Packers": {
-      "away": 3.5,
-      "bookmakers": 8,
-      "home": -3.5,
-      "source": "Consensus (8 books)"
-    },
     "New England Patriots @ Detroit Lions": {
-      "away": 2.5,
+      "away": 2.75,
       "bookmakers": 8,
-      "home": -2.5,
+      "home": -2.75,
       "source": "Consensus (8 books)"
     },
     "Pittsburgh Steelers @ Cincinnati Bengals": {
@@ -79,17 +67,17 @@
       "source": "Consensus (9 books)"
     },
     "Seattle Seahawks @ Las Vegas Raiders": {
-      "away": -3,
+      "away": -3.5,
       "bookmakers": 9,
-      "home": 3,
+      "home": 3.5,
       "source": "Consensus (9 books)"
     },
     "Washington Commanders @ New York Giants": {
-      "away": 1.5,
-      "bookmakers": 9,
-      "home": -1.5,
-      "source": "Consensus (9 books)"
+      "away": 2,
+      "bookmakers": 8,
+      "home": -2,
+      "source": "Consensus (8 books)"
     }
   },
-  "updated": "2026-11-09T19:48:41.250617+00:00"
+  "updated": "2026-11-10T03:34:14.652718+00:00"
 }
