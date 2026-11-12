@@ -2,15 +2,15 @@
   "games": {
     "Arizona Cardinals @ Kansas City Chiefs": {
       "away": 14.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -14.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Baltimore Ravens @ Carolina Panthers": {
       "away": 1.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -1.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Buffalo Bills @ New York Jets": {
       "away": -8,
@@ -26,9 +26,9 @@
     },
     "Cincinnati Bengals @ Washington Commanders": {
       "away": -4,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 4,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Houston Texans @ Cleveland Browns": {
       "away": -5,
@@ -44,9 +44,9 @@
     },
     "Jacksonville Jaguars @ New York Giants": {
       "away": -6,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 6,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Jacksonville Jaguars @ Tennessee Titans": {
       "away": -10.5,
@@ -62,14 +62,14 @@
     },
     "Las Vegas Raiders @ Denver Broncos": {
       "away": 8.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -8.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Los Angeles Chargers @ Baltimore Ravens": {
-      "away": 4,
+      "away": 4.5,
       "bookmakers": 9,
-      "home": -4,
+      "home": -4.5,
       "source": "Consensus (9 books)"
     },
     "Los Angeles Rams @ Arizona Cardinals": {
@@ -80,14 +80,14 @@
     },
     "Miami Dolphins @ Buffalo Bills": {
       "away": 16.5,
-      "bookmakers": 3,
+      "bookmakers": 4,
       "home": -16.5,
-      "source": "Consensus (3 books)"
+      "source": "Consensus (4 books)"
     },
     "Miami Dolphins @ Indianapolis Colts": {
-      "away": 3.5,
+      "away": 4,
       "bookmakers": 9,
-      "home": -3.5,
+      "home": -4,
       "source": "Consensus (9 books)"
     },
     "Minnesota Vikings @ Green Bay Packers": {
@@ -98,9 +98,9 @@
     },
     "Minnesota Vikings @ San Francisco 49ers": {
       "away": 3.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -3.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "New England Patriots @ Detroit Lions": {
       "away": 3,
@@ -109,16 +109,16 @@
       "source": "Consensus (9 books)"
     },
     "New Orleans Saints @ Chicago Bears": {
-      "away": 9.25,
-      "bookmakers": 6,
-      "home": -9.25,
-      "source": "Consensus (6 books)"
+      "away": 9.5,
+      "bookmakers": 7,
+      "home": -9.5,
+      "source": "Consensus (7 books)"
     },
     "New York Jets @ Los Angeles Chargers": {
-      "away": 1.25,
-      "bookmakers": 6,
-      "home": -1.25,
-      "source": "Consensus (6 books)"
+      "away": 1.5,
+      "bookmakers": 7,
+      "home": -1.5,
+      "source": "Consensus (7 books)"
     },
     "Pittsburgh Steelers @ Cincinnati Bengals": {
       "away": 3.5,
@@ -128,9 +128,9 @@
     },
     "Pittsburgh Steelers @ Philadelphia Eagles": {
       "away": -4.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": 4.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "San Francisco 49ers @ Dallas Cowboys": {
       "away": -4,
@@ -146,15 +146,15 @@
     },
     "Tampa Bay Buccaneers @ Detroit Lions": {
       "away": 3.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -3.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Tennessee Titans @ Dallas Cowboys": {
       "away": 7.5,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -7.5,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Washington Commanders @ New York Giants": {
       "away": 2,
@@ -163,5 +163,5 @@
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-11-12T11:09:25.950162+00:00"
+  "updated": "2026-11-12T19:53:53.561776+00:00"
 }
