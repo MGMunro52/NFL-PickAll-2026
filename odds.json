@@ -38,9 +38,9 @@
     },
     "Indianapolis Colts @ Houston Texans": {
       "away": 10,
-      "bookmakers": 6,
+      "bookmakers": 7,
       "home": -10,
-      "source": "Consensus (6 books)"
+      "source": "Consensus (7 books)"
     },
     "Jacksonville Jaguars @ New York Giants": {
       "away": -6,
@@ -157,11 +157,11 @@
       "source": "Consensus (6 books)"
     },
     "Washington Commanders @ New York Giants": {
-      "away": 2.5,
+      "away": 2,
       "bookmakers": 9,
-      "home": -2.5,
+      "home": -2,
       "source": "Consensus (9 books)"
     }
   },
-  "updated": "2026-11-12T00:43:18.619584+00:00"
+  "updated": "2026-11-12T11:09:25.950162+00:00"
 }
