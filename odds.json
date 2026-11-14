@@ -26,9 +26,9 @@
     },
     "Cincinnati Bengals @ Washington Commanders": {
       "away": -4,
-      "bookmakers": 4,
+      "bookmakers": 5,
       "home": 4,
-      "source": "Consensus (4 books)"
+      "source": "Consensus (5 books)"
     },
     "Houston Texans @ Cleveland Browns": {
       "away": -4.5,
@@ -74,9 +74,9 @@
     },
     "Los Angeles Rams @ Arizona Cardinals": {
       "away": -9.5,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 9.5,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Miami Dolphins @ Buffalo Bills": {
       "away": 16.5,
@@ -157,5 +157,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-14T01:26:31.873730+00:00"
+  "updated": "2026-11-14T10:25:37.045203+00:00"
 }
