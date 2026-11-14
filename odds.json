@@ -19,9 +19,9 @@
       "source": "Consensus (9 books)"
     },
     "Carolina Panthers @ New Orleans Saints": {
-      "away": 2.5,
+      "away": 2,
       "bookmakers": 9,
-      "home": -2.5,
+      "home": -2,
       "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Washington Commanders": {
@@ -56,9 +56,9 @@
     },
     "Kansas City Chiefs @ Atlanta Falcons": {
       "away": -3,
-      "bookmakers": 8,
+      "bookmakers": 9,
       "home": 3,
-      "source": "Consensus (8 books)"
+      "source": "Consensus (9 books)"
     },
     "Las Vegas Raiders @ Denver Broncos": {
       "away": 8.5,
@@ -157,5 +157,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-14T18:01:11.537059+00:00"
+  "updated": "2026-11-14T22:23:49.991428+00:00"
 }
