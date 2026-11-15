@@ -13,22 +13,22 @@
       "source": "Consensus (7 books)"
     },
     "Buffalo Bills @ New York Jets": {
-      "away": -8,
+      "away": -7.5,
       "bookmakers": 9,
-      "home": 8,
+      "home": 7.5,
       "source": "Consensus (9 books)"
     },
     "Carolina Panthers @ New Orleans Saints": {
-      "away": 2,
+      "away": 1.5,
       "bookmakers": 9,
-      "home": -2,
+      "home": -1.5,
       "source": "Consensus (9 books)"
     },
     "Cincinnati Bengals @ Washington Commanders": {
       "away": -4,
-      "bookmakers": 5,
+      "bookmakers": 4,
       "home": 4,
-      "source": "Consensus (5 books)"
+      "source": "Consensus (4 books)"
     },
     "Houston Texans @ Cleveland Browns": {
       "away": -4.5,
@@ -157,5 +157,5 @@
       "source": "Consensus (7 books)"
     }
   },
-  "updated": "2026-11-14T22:23:49.991428+00:00"
+  "updated": "2026-11-15T06:31:16.545915+00:00"
 }
